@@ -647,3 +647,66 @@ dd {
   #title {
     font-size: 2em;
   }
+
+  .ζyper-description {
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .join {
+    font-size: 20px;
+    margin: 2em auto;
+    padding: 0 10px;
+  }
+  .join h1 {
+    font-size: 32px;
+  }
+  .join #welcome {
+    font-size: 18px;
+  }
+  .flow {
+    padding-left: 30px;
+  }
+  .flow::before {
+    display: none;
+  }
+  .flow > li .icon {
+    position: static;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .flow > li dl {
+    padding-left: 0;
+  }
+  .flow > li dl dt {
+    font-size: 24px;
+  }
+  .flow > li dl dd {
+    font-size: 18px;
+  }
+  .flow > li dl::after {
+    display: none;
+}
+
+  /* ===== フッター ===== */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+  }
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-column {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .footer-column h4 {
+    font-size: 16px;
+  }
+  .footer-column ul li a {
+    font-size: 14px;
+  }
+}
