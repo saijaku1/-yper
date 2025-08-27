@@ -20,7 +20,7 @@ targets.forEach((target) => observer.observe(target));
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.createElement("div");
   menuToggle.classList.add("menu-toggle");
-  menuToggle.innerHTML = "☰"; // ハンバーガーアイコン
+  menuToggle.innerHTML = "☰"; 
   document.querySelector("header nav").prepend(menuToggle);
 
   const navMenu = document.querySelector("header nav ul");
