@@ -28,3 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navMenu.style.display = navMenu.style.display === "flex" ? "none" : "flex";
   });
 });
+
+const button=document.querySelector("#read-button").addEventListener("click",=>(){
+  window.location.href="https://zetyper.f5.si/notice/Beta";
+})
