@@ -121,7 +121,7 @@ hr{
   content:'';
   width: 1em;
   height: 1em;
-   display: none; /*現在非表示中。*/
+  
   background-color: var(--primary-color);
   border-radius: 50%;
 }
@@ -138,7 +138,6 @@ hr{
   font-family:Consolas;
   font-size:3rem;
   color:white;
-  display: none; /*現在非表示中。*/
   height:60px;
   width:60px;
   border-radius:50%;
@@ -170,15 +169,38 @@ hr{
   border-radius: .5em;
   text-align: center;
   align-content: center;
-  background-color: var(--primary-color);
+  background:linear-gradient(to right,#1352a9 ,#087f14);
 }
 .card h3{
-  color: #fff;
+  
   text-align: center;
   padding: 1em;
   font-size: 1.5em;
  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin:0;
+}
+.card a{
+  color:#ffffff;
+  text-decoration: none;
+  transition:all .3s;
+&:hover{
+  color:#c9c9c9;
+  text-decoration: underline;
+}
+}
+.card h4,.card p,.card a{
+  color:#ffffff;
+}
+.card button{
+  padding:12px 38px;
+  border-radius: 10px;  
+  border:none;
+  box-shadow:0 10px 15px rgba(0, 0, 0, 0.5);
+  transition:background-color 0.5s;
+  &:hover{
+    cursor:pointer;
+    background-color: #c0bebe;
+  }
 }
   .hidden {
     opacity: 0;
@@ -283,7 +305,7 @@ hr{
 }
 
 .goals-text h1 {
-  font-size: 60px;
+  font-size: 50px;
   text-align: center;
 }
 
