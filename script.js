@@ -29,6 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const button=document.querySelector("#read-button").addEventListener("click",=>(){
+const button=document.querySelector("#read-button").addEventListener("click",()=>{
   window.location.href="https://zetyper.f5.si/notice/Beta";
 })
