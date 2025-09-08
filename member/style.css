@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -187,14 +191,40 @@ main .background h1 {
   color: #c0c0c0;
 }
 select {
-    position: relative;
-    top: 50vh;         
-    left: 50%;         
-    transform: translate(-50%, -50%); 
-    padding: 12px;
-    font-size: 16px;
-    z-index: 1000;
+  position: fixed;
+  top: 50vh;         
+  left: 93%;         
+  transform: translate(-50%, -50%); 
+ z-index: 1000;
+  padding: 10px 40px 10px 12px;
+  font-size: 16px;
+  font-family: "Segoe UI", sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
+
+select:hover {
+  border-color: #888;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+}
+
+select:focus {
+  outline: none;
+  border-color: #4A90E2;
+  box-shadow: 0 0 8px rgba(74,144,226,0.4);
+}
+
 .footer-bottom {
   text-align: center;
   font-size: 0.9em;
@@ -210,6 +240,27 @@ select {
       border-radius: 10px;
       background: #fafafa;
     }
+    
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #064990;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size:35px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
 @keyframes fadeIn {
     to {
         opacity: 1;
@@ -247,4 +298,9 @@ header nav ul li a {
     .card {
         width: 80%;
     }
+    select {
+    position: relative;
+    top: 50vh;         
+    left: 50%;   
+}
 }
