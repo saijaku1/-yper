@@ -44,7 +44,8 @@
               <li>打鍵数・正確性測定を追加</li>
           </div>
     </div><div class="next">
-         <button onclick="backPage();">前のページへ</button>
+        <button onclick="backHome();">ホームページへ</button> 
+        <button onclick="backPage();">前のページへ</button>
     </div>
 </main>
 
@@ -103,7 +104,11 @@
   hamburger.addEventListener("click", () => {
     urls.classList.toggle("active");
   });
-function backPage(){
+function backHome(){
+window.location.href="https://zetyper.f5.si/";
+}
+    
+    function backPage(){
 window.location.href="https://zetyper.f5.si/docs/terms-of-service";
 }
 
