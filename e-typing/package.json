@@ -1,7 +1,11 @@
 {
-  "name": "e-typing-search",
+  "name": "e-typing",
   "version": "1.0.0",
+  "description": "e-typingランキング検索アプリ",
   "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "axios": "^1.7.0",
     "cheerio": "^1.0.0"
