@@ -99,7 +99,7 @@ main .background h1 {
     box-shadow: 0 8px 25px rgba(0,0,0,0.4);
 }
 
-.card img {
+.card .li-image {
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -261,6 +261,20 @@ select:focus {
     transition: background-color 0.3s ease;
     z-index: 1000;
 }
+.openBtn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #064990;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+        background-color: #043370;
+    }
+}
 @keyframes fadeIn {
     to {
         opacity: 1;
@@ -300,7 +314,7 @@ header nav ul li a {
     }
     select {
     position: relative;
-    top: 50vh;         
+    top: 55vh;         
     left: 50%;   
 }
 }
