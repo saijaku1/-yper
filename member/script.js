@@ -21,3 +21,19 @@ memberSelect.addEventListener("change", () => {
     document.getElementById(selectedId).scrollIntoView({ behavior: "smooth" });
   }
 });
+
+// 開くボタン
+document.querySelectorAll('.openBtn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const targetId = btn.getAttribute('data-target');
+    const dialog = document.getElementById(targetId);
+    dialog.showModal();
+  });
+});
+
+// 閉じるボタン
+document.querySelectorAll('.closeBtn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.closest('dialog').close();
+  });
+});
