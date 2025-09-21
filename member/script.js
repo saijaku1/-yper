@@ -22,18 +22,23 @@ memberSelect.addEventListener("change", () => {
   }
 });
 
-// 開くボタン
-document.querySelectorAll('.openBtn').forEach(btn => {
+const openBtns = document.querySelectorAll('.openBtn');
+const closeBtns = document.querySelectorAll('.closeBtn');
+
+openBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     const targetId = btn.getAttribute('data-target');
     const dialog = document.getElementById(targetId);
     dialog.showModal();
+
+    document.body.classList.add('no-scroll'); 
   });
 });
 
-// 閉じるボタン
-document.querySelectorAll('.closeBtn').forEach(btn => {
+closeBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     btn.closest('dialog').close();
+
+    document.body.classList.remove('no-scroll'); 
   });
 });
