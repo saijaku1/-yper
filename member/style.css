@@ -276,7 +276,7 @@ dialog {
 dialog::backdrop {
   background: rgba(0, 0, 0, 0.5);
 }
-dialog img{
+dialog .fingering-image{
   width: 550px;
   height: 200px;
   border-radius: 50%;
@@ -353,5 +353,13 @@ dialog img{
     top: 55vh;
     left: 50%;
   }
+  dialog {
+    width: 90%;
+    height: auto;
+  }
+  dialog .fingering-image{
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+  }
 }
-
