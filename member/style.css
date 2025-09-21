@@ -276,10 +276,9 @@ dialog {
 dialog::backdrop {
   background: rgba(0, 0, 0, 0.5);
 }
-dialog .fingering-image{
+dialog img{
   width: 550px;
   height: 200px;
-  border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
 }
@@ -299,10 +298,11 @@ dialog .fingering-image{
 }
 .closeBtn {
   margin-top: 15px;
-  padding: 10px 20px;
+  padding: 12px 20px;
   background-color: #064990;
   color: white;
   border: none;
+  margin:auto 30px;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
@@ -353,13 +353,12 @@ dialog .fingering-image{
     top: 55vh;
     left: 50%;
   }
-  dialog {
-    width: 90%;
-    height: auto;
+  dialog{
+    width:auto;
   }
-  dialog .fingering-image{
-    width: 100px;
-    height: auto;
+   dialog img{
+    width: 370px;
+     object-fit:cover;
     margin-bottom: 15px;
   }
 }
