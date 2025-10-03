@@ -85,30 +85,32 @@ main .background h1{
 }
 
 .cards-list {
-  margin:3em auto;
-  overflow-x: auto;;
-  width:100%;
-  display:flex;
-  gap:1em;
+  margin: 3em auto;
+  overflow-x: auto;
+  width: 100%;
+  display: flex;
+  gap: 1em;
   scroll-behavior: smooth;
-  anchor-name:--cards-list;
+  anchor-name: --cards-list;
   scroll-snap-type: x mandatory;
-  scroll-marker-group:after;
-}
-.cards-list::scroll-marker-group{
-  display:flex;
-  justify-content: center;
-  gap:.5em;
-}
-#what-ζyper{
-  text-align: center;
-  margin-top: 5em;
-  font-size:35px;
+  scroll-marker-group: after;
 }
 
-hr{
-  border:none;
-  height:1px;
+.cards-list::scroll-marker-group {
+  display: flex;
+  justify-content: center;
+  gap: .5em;
+}
+
+#what-ζyper {
+  text-align: center;
+  margin-top: 5em;
+  font-size: 35px;
+}
+
+hr {
+  border: none;
+  height: 1px;
   background-image: linear-gradient(
     to right,
     transparent,
@@ -117,90 +119,102 @@ hr{
   );
 }
 
-.card::scroll-marker{
-  content:'';
+.card::scroll-marker {
+  content: '';
   width: 1em;
   height: 1em;
-  
   background-color: var(--primary-color);
   border-radius: 50%;
 }
-.card::scroll-marker:target-current{
-  background-color:var(--brand-color);
+
+.card::scroll-marker:target-current {
+  background-color: var(--brand-color);
 }
+
 .cards-list::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
-.cards-list::scroll-button(right),.cards-list::scroll-button(left){
-  content:'→';
-  background-color:var(--brand-color);
-  border:none;
-  font-family:Consolas;
-  font-size:3rem;
-  color:white;
-  height:60px;
-  width:60px;
-  border-radius:50%;
-  padding-bottom:.1em;
-  cursor:pointer;
-  position:fixed;
+
+.cards-list::scroll-button(right),
+.cards-list::scroll-button(left) {
+  content: '→';
+  background-color: var(--brand-color);
+  border: none;
+  font-family: Consolas;
+  font-size: 3rem;
+  color: white;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  padding-bottom: .1em;
+  cursor: pointer;
+  position: fixed;
   position-anchor: --cards-list;
   position-area: right center;
-  translate:-100%;
+  translate: -100%;
 }
- 
 
-.cards-list::scroll-button(left){
-  content:'←';
+.cards-list::scroll-button(left) {
+  content: '←';
   position-area: left center;
-  translate:100%;
+  translate: 100%;
 }
-.cards-list::scroll-button(right):disabled,.cards-list::scroll-button(left):disabled{
+
+.cards-list::scroll-button(right):disabled,
+.cards-list::scroll-button(left):disabled {
   opacity: 0.5;
   cursor: auto;
 }
-.card{
+
+.card {
   scroll-snap-align: start;
-  height:25em;
+  height: 25em;
   width: 25em;
-  flex:0 0 25em;
-  margin-left:20em;
-  padding:1em;
+  flex: 0 0 25em;
+  margin-left: 20em;
+  padding: 1em;
   border-radius: .5em;
   text-align: center;
   align-content: center;
-  background:linear-gradient(to right,#1352a9 ,#087f14);
+  background: linear-gradient(to right, #1352a9, #087f14);
 }
-.card h3{
-  
+
+.card h3 {
   text-align: center;
   padding: 1em;
   font-size: 1.5em;
- text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  margin:0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
 }
-.card a{
-  color:#ffffff;
+
+.card a {
+  color: #ffffff;
   text-decoration: none;
-  transition:all .3s;
-&:hover{
-  color:#c9c9c9;
+  transition: all .3s;
+}
+
+.card a:hover {
+  color: #c9c9c9;
   text-decoration: underline;
 }
+
+.card h4,
+.card p,
+.card a {
+  color: #ffffff;
 }
-.card h4,.card p,.card a{
-  color:#ffffff;
+
+.card button {
+  padding: 12px 38px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.5s;
 }
-.card button{
-  padding:12px 38px;
-  border-radius: 10px;  
-  border:none;
-  box-shadow:0 10px 15px rgba(0, 0, 0, 0.5);
-  transition:background-color 0.5s;
-  &:hover{
-    cursor:pointer;
-    background-color: #c0bebe;
-  }
+
+.card button:hover {
+  cursor: pointer;
+  background-color: #c0bebe;
 }
   .hidden {
     opacity: 0;
@@ -628,17 +642,17 @@ dd {
     font-size: 22px;
     padding: 0 10px;
   }
-  .cards-list {
+.cards-list {
     flex-direction: column;
     gap: 1em;
     margin: 1em auto;
+    overflow-x: hidden; 
   }
   .card {
     width: 90%;
     height: auto;
     margin: 0 auto;
   }
-
   .goals-grid {
     display: flex;
     flex-direction: column;
