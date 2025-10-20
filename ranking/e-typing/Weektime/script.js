@@ -6,7 +6,7 @@ const rawData = {
     "Eito:744pt",
     "かぼちゃ:769pt",
     "狂:682pt",
-    "unused_HA:650pt",
+    "unused_HAL:650pt",
     "まめえだ:624pt",
     "だだだ:624pt",
     "スピードアキュレイト:620pt",
@@ -16,7 +16,19 @@ const rawData = {
     "きる:659pt"
     
   ],
-  div2: [],
+  div2: [
+    "Jaku:509pt",
+    "HFKRU:533pt",
+    "Eito:643pt",
+    "かぼちゃ:737pt",
+    "unused_HAL:617pt",
+    "まめえだ:550pt",
+    "だだだ:560pt",
+    "owata:591pt"
+    "スピードアキュレイト:538pt",
+    "にこふぁす:415pt"
+    "きる:614pt"
+  ],
 };
 
 function fillTable(divId, data) {
