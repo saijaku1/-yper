@@ -154,13 +154,13 @@ hr {
   cursor:pointer;
   position:fixed;
   position-anchor: --cards-list;
-  position-area:right center;
+  position-area:right top;
   translate:-150%;
 }
 
 .cards-list::scroll-button(left){
   content:'←';
-  position-area:left center;
+  position-area:left top;
   translate:200%;
 }
 .cards-list::scroll-button(right):disabled,
