@@ -29,6 +29,20 @@ const rawData = {
     "きる:614pt"
   ],
       div3: [
+        "Jaku:576pt",
+        "かぼちゃ:749pt",
+        "RFれんこん:700pt",
+        "unused_HAL:651pt",
+        "だだだ:645pt",
+        "Eito:627pt",
+        "きる:596pt",
+        "スピードアキュレイト:581pt",
+        "owata☆♪:573pt",
+        "まめえだ:554pt",
+        "HFKRU:483pt"
+        
+  ],
+  div4:[
   ]
 };
 
