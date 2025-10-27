@@ -120,6 +120,7 @@ main .background h1 {
   color: #fff;
   word-break: break-word;
   white-space: normal;
+    flex-grow: 1;
 }
 
 .footer {
