@@ -32,13 +32,14 @@ const rawData = {
        "Jaku:576pt",
       "かぼちゃ:749pt",
        "RFれんこん:700pt",
-       "unused_HAL:651pt",
+       "unused_HAL:655pt",
        "だだだ:645pt",
        "Eito:627pt",
        "きる:596pt",
+       "†漆黒の堕天使†(MHJ):580pt",
         "スピードアキュレイト:581pt",
-      "owata☆♪:573pt",
-      "まめえだ:554pt",
+      "owata☆♪:696pt",
+      "まめえだ:561pt",
        "HFKRU:483pt"    
   ],
   div4:[
