@@ -372,6 +372,9 @@ main .background h1 {
   cursor: pointer;
 }
 
+  .menu-toggle {
+    display: none;
+  }
 .table-div {
   display: none;
   margin: 2em auto;
