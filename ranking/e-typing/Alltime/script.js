@@ -2,7 +2,6 @@ const rawData = {
   ranking: [
     "Jaku:576pt",
     "HFKRU:544pt",
-    "Eito:744pt",
     "スピードアキュレイト:620pt",
     "ぬう:622pt",
     "円周率:622pt",
