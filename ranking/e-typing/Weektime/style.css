@@ -383,6 +383,7 @@ select:hover {
 }
 .menu-toggle{
  display:none;
+}
 /* スマホ版 */
 @media (max-width: 768px) {
 
