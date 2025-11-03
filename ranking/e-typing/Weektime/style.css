@@ -381,7 +381,8 @@ select:hover {
   background-color: var(--brand-color);
   cursor: pointer;
 }
-
+.menu-toggle{
+ display:none;
 /* スマホ版 */
 @media (max-width: 768px) {
 
