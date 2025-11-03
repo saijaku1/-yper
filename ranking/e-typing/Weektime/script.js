@@ -43,6 +43,18 @@ const rawData = {
        "HFKRU:483pt"    
   ],
   div4:[
+    "Jaku:573pt",
+    "かぼちゃ:780pt",
+    "れんこん:680pt",
+    "owata☆♪:640pt",
+    "だだだ:602pt",
+    "スピードアキュレイト:600pt",
+    "きる:576pt",
+    "まめえだ:567pt",
+    "こたくん:461pt",
+    "HFKRU:444pt",
+    "Eito:712pt",
+    "unused_HAL:658pt",
   ]
 };
 
