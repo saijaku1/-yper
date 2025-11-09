@@ -1,4 +1,4 @@
-    html{
+   html{
   scroll-behavior: smooth;
 }
 
@@ -343,3 +343,26 @@ main .background h1{
     margin-top: 50px;
     font-size: 20px;
     }
+
+#result, #rankText {
+  opacity: 0;
+}
+
+@keyframes slideBounce {
+  0% {
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(50%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+#result.animate, #rankText.animate {
+  animation: slideBounce 1s ease forwards;
+}
