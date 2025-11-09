@@ -350,7 +350,7 @@ main .background h1{
 
 @keyframes slideBounce {
   0% {
-    transform: translateX(-150%);
+    transform: translateX(-100%);
     opacity: 0;
   }
   60% {
