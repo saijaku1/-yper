@@ -1,63 +1,144 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ζyperポイント計算機</title>
+    <title>ζyper</title>
     <link rel="icon" href="../image/zetyper.png">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <main>
-  <div class="button" href="#top">
-    <a href="#top" class="back-button">↑</a>
-  </div>
-    <div class="background">
-<h1 class="hidden slide-in-left delay-1">ζyperポイント計算機</h1>
-</div>
+<body id="top">
 <header>
     <nav>
         <ul>
             <li><img src="../image/zetyper.png"  id="zetyper-icon"></li>
-            <li><a href="https://zetyper.f5.si">ホーム</a></li>
             <li><a href="https://zetyper.f5.si/ranking">ζyperランキング</a></li>
-            <li><a href="https://zetyper.f5.si/#join">チームへの参加方法</a></li>
+            <li><a href="https://zetyper.f5.si/survey">ζyperランク測定</a></li>
+            <li><a href="#join">チームへの参加方法</a></li>
             <li><a href="https://zetyper.f5.si/member">メンバー紹介</a></li>
         </ul>
     </nav>
 </header>
-<div>
-    <p>ζyperポイントの計算機構です。</p>
-<form id="scoreForm" autocomplete="off">
-  <div class="box">
-    <input type="number" id="ety" placeholder="e-typing" required max="1300">
-    <input type="number" id="dtr" placeholder="打トレ" required max="1300">
-    <input type="number" id="tyz" placeholder="タイピンガーZ" required max="1300">
-    <input type="number" id="tys" placeholder="タイピング速度測定" required max="650">
-    <input type="number" id="zet" placeholder="ζyper腕試し" required max="5000">
-    <input type="number" id="zew" placeholder="ζyper単語腕試し" required max="3000">
-    <button type="submit" id="send">計算</button>
-    <button type="button" id="reset">値をリセット</button>
+<main>
+  <div class="button" href="#top">
+    <a href="#top" class="back-button">↑</a>
   </div>
-</form>
+    <div class="background">
+<h1 class="hidden slide-in-left delay-1">ζyper</h1>
+</div>
+<div class="goal">
+    <h2  id="animation-text"  style=" color:white;"><span>ζyper</span>は<span class="span1">最強</span>のチームを作るために結成されました</h2>
+</div>
+<h1 style="text-align: center; font-size:70px; margin-top:20px; color:white;" class="hidden slide-in-right delay-2">更新情報</h1>
+<div class="cards-list">
+   <div class="card" >
+        <h3 style="color:white;"><a href="https://zetyper.f5.si/survey">ζyperランク測定機能を追加しました！</a></h3>
+    <p>この機能はあなたのζyperレベルを測定してくれる機能となっています</p>
+       <p>現在未完成ではありますがぜひ使ってみてください！！</p>
+    <h4>2025年10月23日 更新済み</h4>
+    </div>
 
-<p id="result" style="color:white; text-align: center; font-size:30px;">計算結果がここに出ます・・・</p>
-<p id="rankText" style="color:white; text-align: center; font-size:30px;">your rank:<span id="rank">?</span></p>
+    <div class="card" >
+        <h3 style="color:white;">ζyper参加申請の条件を変更しました</h3>
+    <p>2025年10月19日より参加申請の項目にζyper単語腕試しが追加されます</p>
+    <p>参加申請を行う際に<a href="https://ankey.io/wordbooks/d3qafaa9io6g02nu2t5g">ζyper単語腕試し</a>と<a href="https://x.gd/TzhHr">ζyper腕試し</a>のプレイが必須となります</p>
+    <p>このたびは、突然の変更となってしまい、誠に申し訳ございません。</p> 
+    <p>ご迷惑をおかけいたしましたことを、お詫び申し上げます。</p> 
+    <h4>2025年10月19日 更新済み</h4>
+    </div>
 
+    <div class="card" >
+        <h3 style="color:white;">ランキング機能を追加しました！</h3>
+    <p>e-typingの週末ランキングが実装化されました！</p>
+    <p>その他に一般的なバグを修正しました</p>
+    <p>現在開発中のところもありますが時間がたちつつ更新していきますのでよろしくお願いします！！</p> 
+    <h4>2025年10月17日 更新済み</h4>
+    </div>
 
-<div class="use">
-<h2>使い方/How to use</h2>
-<p>それぞれのハイスコアを入力して<b>計算ボタン</b>を押してください。</p>
-<p>made by shidaken ζyper開発班</p>
+    <div class="card" >
+        <h3 style="color:white;">スマホ版のカードの表示バグを修正しました</h3>
+    <p>バグ修正が遅れてしまって本当に申し訳ございません。</p> 
+    <p>多分正常に表示されると思います！！</p> 
+    <h4>2025年10月7日 更新済み</h4>
+    </div>
+
+    <div class="card" >
+        <h3 style="color:white;">ζyper公式Channelの登録者数が100人を突破!!</h3>
+    <p>おかげさまでζyperのチャンネル登録者数が100人を突破！！！みなさま本当にありがとうございます！！！</p> 
+    <h4>2025年10月2日 更新済み</h4>
+    </div>
+
+    <div class="card" ><h3><a href="https://zetyper.f5.si/measurement">打鍵数・正確性測定計算ツール</a> </h3>
+    <p>1秒の打鍵数、秒数の正確性を測定できます！タイピングの結果を具体的に知りたいときにぜひ使ってみてください！</p> 
+    <h4>2025年9月20日 更新済み</h4>
+    </div>
+</div>
+<div class="content">
+  <hr>
+  <h2 class="hidden zoom-in delay-1" id="title" style="color:white;">ζyperの目標</h2>
+</div>
+<div class="goals-grid" >
+  <div class="goals-text hidden slide-in-top delay-1" >
+    <h1 class="hidden zoom-in delay-1" >1.技術の追求</h1>
+    <p class="hidden zoom-in delay-2" style="font-size:30px; color:white;"><b>ζyper</b>は、最速で正確なタイピングを追求し、メンバー同士が<b>切磋琢磨</b>することで個々の技術力を高めます。</p>
+  </div>
+  <div class="goals-text hidden slide-in-bottom delay-3">
+    <h1 class="hidden slide-in-right delay-2">2.チーム力の強化</h1>
+    <p class="hidden zoom-in delay-3"  style="font-size:30px; color:white;">私たちは、単なる個人のスキル向上だけでなく、<b>協力し合い助け合うチームワーク</b>を重視します。</p>
+  </div>
+
+  <div class="goals-text hidden slide-in-left delay-3">
+    <h1 class="hidden slide-in-right delay-4">3.精神力・集中力の鍛錬</h1>
+    <p class="hidden zoom-in delay-3"  style="font-size:30px; color:white;">大会や練習を通して、集中力・持続力・冷静さを養い、<b>どんな状況でも力を発揮できるチーム</b>を目指します。</p>
+  </div>
+     <div class="goals-text hidden slide-in-right delay-3">
+    <h1 class="hidden slide-in-left delay-4">4.挑戦</h1>
+    <p class="hidden zoom-in delay-3"  style="font-size:30px; color:white;"><b>ζyper</b>は、常に新しい大会や難題に挑戦し、成長と進化を続けることで、<b>最強チームの座</b>を目指します。</p>
+  </div>
+</div>
+<div id="what-ζyper" class="hidden slide-in-top delay-1">
+  <h1 style="color:white;">ζyperの理念</h1>
+  <hr>
+</div>
+<div class="hidden slide-in-right delay-1">
+  <p class="ζyper-description hidden zoom-in delay-2" style="color:white;">
+  私たち<b> ζyper（ゼータイパー）</b> は、競技タイピングにおいて<b>卓越した速度を誇るタイパーたちを集結させ</b>、<b>互いに研鑽し合うことを理念として結成された</b>チームです。
+  </p>
+</div>
+<div class="join">
+  <h1 id="join" class="hidden slide-in-left delay-1" style="color:white;">ζyperへの参加方法</h1>
+  <hr>
+  <p class="hidden zoom-in delay-2" id="welcome" style="color:white;"><b>ζyper</b>では、<b>タイピングに情熱を持ち、向上心のある方</b>を<br>常に歓迎しています。参加を希望される方は、以下の手順でご応募ください。</p>
+  <ul class="flow">
+     <li>
+      <span class="icon hidden zoom-in delay-2">STEP.01</span>
+      <dl>
+        <dt class="hidden fade-in delay-2">プレイ</dt>
+        <dd class="hidden slide-in-right delay-4"><a href="https://ankey.io/wordbooks/cvoevja9io6g02pft380">ζyper腕試し</a>と<a href="https://ankey.io/wordbooks/d3qafaa9io6g02nu2t5g">単語腕試し</a>の両方をプレイする</dd>
+        <dd class="hidden slide-in-right delay-4"><a href="https://ankey.io/wordbooks/cvoevja9io6g02pft380" style="color:#50eaf2;">ζyper腕試し</a>と<a href="https://ankey.io/wordbooks/d3qafaa9io6g02nu2t5g" style="color:#3ede33;">単語腕試し</a>の両方をプレイする</dd>
+      </dl>
+    </li>
+
+     <li>
+      <span class="icon hidden zoom-in delay-3">STEP.02</span>
+      <dl>
+        <dt class="hidden fade-in delay-3">申請</dt>
+        <dd class="hidden slide-in-left delay-4"><a href="https://docs.google.com/forms/d/1ifzD14vdlZccl-CXgxi1WWKQg55kwzcxKANf4G5nXQ0">ζyper参加申請フォーム</a>で内容を確認し参加を申請をします</dd>
+        <dd class="hidden slide-in-left delay-4"><a href="https://docs.google.com/forms/d/1ifzD14vdlZccl-CXgxi1WWKQg55kwzcxKANf4G5nXQ0" style="color:#e3a41b;">ζyper参加申請フォーム</a>で内容を確認し参加を申請をします</dd>
+      </dl>
+    </li>
+  </ul>
+  <div class="attention" style="text-align:center; margin-top:30px;">
+  <h3 style="color:white;" class="hidden slide-in-bottom delay-3">※参加の承認は平均して2～3日かかります</h3>
+  <p class="hidden zoom-in delay-4" style="color:red; font-weight:600; font-size:40px;">私たちと一緒に、タイピングの<span style="color:yellow;">新たな高み</span>を目指しましょう！</p>
 </div>
 </div>
-
 <footer class="footer">
   <div class="footer-container">
     <!-- 左側：ロゴとタイトル -->
     <div class="footer-brand">
       <img src="../image/zetyper-footer.png" width="200px" height="200px">
-      
+
     </div>
 
     <!-- 右側：フッターメニュー -->
@@ -70,7 +151,7 @@
           <li><a href="https://discord.gg/sAjsFKArNw" target="_blank">Discord</a></li>
           <li><a href="https://padlet.com/typer3915/yper-yn963c63aqw79j9p" target="_blank">Padlet</a></li>
              <li><a href="https://ankey.io/@ze-typer" target="_blank">Ankey</a></li>
-          
+
         </ul>
       </div>
 
@@ -99,95 +180,6 @@
   </div>
 </footer>
 </main>
-<script>
-const btn = document.getElementById('send');
-const result = document.getElementById('result');
-const rankText = document.getElementById('rankText');
-
-btn.addEventListener('click', () => {
-  result.classList.remove('animate');
-  rankText.classList.remove('animate');
-  void result.offsetWidth;
-  result.classList.add('animate');
-});
-
-result.addEventListener('animationend', () => {
-  rankText.classList.remove('animate');
-  void rankText.offsetWidth;
-  rankText.classList.add('animate');
-});
-
- const targets = document.querySelectorAll(".hidden");
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      } else {
-        entry.target.classList.remove("show");
-      }
-    });
-  },
-  {
-    threshold: 0.1,
-  }
-);
-
-targets.forEach((target) => observer.observe(target));
-
-document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.createElement("div");
-  menuToggle.classList.add("menu-toggle");
-  menuToggle.innerHTML = "☰"; // ハンバーガーアイコン
-  document.querySelector("header nav").prepend(menuToggle);
-
-  const navMenu = document.querySelector("header nav ul");
-  menuToggle.addEventListener("click", () => {
-    navMenu.style.display = navMenu.style.display === "flex" ? "none" : "flex";
-  });
-});
-
-const $ = document.getElementById.bind(document);
-const form = $("scoreForm");
-const inputs = ["ety", "dtr", "tyz", "tys", "zet", "zew"];
-const ranks =['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','Z','α','β','γ','δ','ε','η','θ','ι','κ','λ','μ','ν','ξ','ο','π','ρ','σ','τ','υ','φ','χ','ψ','ω','ζ'];
-const scores=[1300,1350,1400,1450,1500,1550,1600,1650,1700,1750,1800,1850,1900,1950,2000,2050,2100,2150,2200,2250,2300,2350,2400,2450,2500,2550,2600,2650,2700,2750,2800,2850,2900,2950,3000,3050,3100,3150,3200,3250,3300,3350,3400,3450,3500,3550,3600,3650,3700,3750,3800];
-
-
-inputs.forEach(id => {
-  const saved = localStorage.getItem(id);
-  if (saved !== null) {
-    $(id).value = saved;
-  }
-
-  $(id).addEventListener("input", (e) => {
-    localStorage.setItem(id, e.target.value);
-  });
-});
-
-form.addEventListener("submit", function(event) {
-  event.preventDefault(); 
-  let rec = inputs.map(id => Number($(id).value));
-  const score = Math.floor(rec[0] + (rec[1] + rec[2] + rec[3] * 2) / 5 * 4 + (rec[4] + rec[5]) / 10);
-  $("result").textContent = "合計で" + score + "pt"; 
-  rank=0;
-
-  for(let i=0;i<scores.length-1;i++){
-    if(scores[i+1]<score){
-      rank++;
-    };
-  };
-  $("rank").textContent=ranks[rank];
-});
-$("reset").addEventListener("click", () => {
-  inputs.forEach(id => {
-    $(id).value = "";              
-    localStorage.removeItem(id);
-  });
-  $("result").textContent = "計算結果がここに出ます・・・"; 
-});
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
