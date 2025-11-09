@@ -42,7 +42,7 @@
 </form>
 
 <p id="result" style="color:white; text-align: center; font-size:30px;">計算結果がここに出ます・・・</p>
-<p style="color:white; text-align: center; font-size:30px;">your rank:<span id="rank">?</span></p>
+<p id="rankText" style="color:white; text-align: center; font-size:30px;">your rank:<span id="rank">?</span></p>
 
 
 <div class="use">
@@ -116,8 +116,8 @@ result.addEventListener('animationend', () => {
   void rankText.offsetWidth;
   rankText.classList.add('animate');
 });
-    
-    const targets = document.querySelectorAll(".hidden");
+
+ const targets = document.querySelectorAll(".hidden");
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -168,19 +168,18 @@ inputs.forEach(id => {
 
 form.addEventListener("submit", function(event) {
   event.preventDefault(); 
-
   let rec = inputs.map(id => Number($(id).value));
   const score = Math.floor(rec[0] + (rec[1] + rec[2] + rec[3] * 2) / 5 * 4 + (rec[4] + rec[5]) / 10);
   $("result").textContent = "合計で" + score + "pt"; 
-  rank=0
+  rank=0;
+
   for(let i=0;i<scores.length-1;i++){
     if(scores[i+1]<score){
       rank++;
     };
   };
-  $("rank").textContent=ranks[rank]
+  $("rank").textContent=ranks[rank];
 });
-
 $("reset").addEventListener("click", () => {
   inputs.forEach(id => {
     $(id).value = "";              
