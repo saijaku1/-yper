@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -41,6 +42,7 @@
 </form>
 
 <p id="result" style="color:white; text-align: center; font-size:30px;">計算結果がここに出ます・・・</p>
+<p style="color:white; text-align: center; font-size:30px;">your rank:<span id="rank">?</span></p>
 
 
 <div class="use">
@@ -132,6 +134,9 @@ document.addEventListener("DOMContentLoaded", () => {
 const $ = document.getElementById.bind(document);
 const form = $("scoreForm");
 const inputs = ["ety", "dtr", "tyz", "tys", "zet", "zew"];
+const ranks =['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','α','β','γ','δ','ε','η','θ','ι','κ','λ','μ','ν','ξ','ο','π','ρ','σ','τ','υ','φ','χ','ψ','ω','ζ'];
+const scores=[1300,1350,1400,1450,1500,1550,1600,1650,1700,1750,1800,1850,1900,1950,2000,2050,2100,2150,2200,2150,2200,2250,2300,2350,2400,2450,2500,2550,2600,2650,2700,2750,2800,2850,2900,2950,3000,3050,3100,3150,3200,3250,3300,3350,3400,3450,3500,3550,3600,3650,3700,3750,3800];
+
 
 inputs.forEach(id => {
   const saved = localStorage.getItem(id);
@@ -149,13 +154,24 @@ form.addEventListener("submit", function(event) {
 
   let rec = inputs.map(id => Number($(id).value));
   const score = Math.floor(rec[0] + (rec[1] + rec[2] + rec[3] * 2) / 5 * 4 + (rec[4] + rec[5]) / 10);
-  $("result").textContent = "合計で" + score + "pt";
+  $("result").textContent = "合計で" + score + "pt"; 
+  rank=0
+  for(let i=0;i<scores.length-1;i++){
+    if(scores[i+1]<score){
+      rank++;
+    };
+  };
+  $("rank").textContent=ranks[rank]
 });
+
+if(rec.includes(0)){
+
+}
 
 $("reset").addEventListener("click", () => {
   inputs.forEach(id => {
     $(id).value = "";              
-    localStorage.removeItem(id);   
+    localStorage.removeItem(id);
   });
   $("result").textContent = "計算結果がここに出ます・・・"; 
 });
