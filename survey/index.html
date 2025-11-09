@@ -100,6 +100,23 @@
 </footer>
 </main>
 <script>
+const btn = document.getElementById('send');
+const result = document.getElementById('result');
+const rankText = document.getElementById('rankText');
+
+btn.addEventListener('click', () => {
+  result.classList.remove('animate');
+  rankText.classList.remove('animate');
+  void result.offsetWidth;
+  result.classList.add('animate');
+});
+
+result.addEventListener('animationend', () => {
+  rankText.classList.remove('animate');
+  void rankText.offsetWidth;
+  rankText.classList.add('animate');
+});
+    
     const targets = document.querySelectorAll(".hidden");
 
 const observer = new IntersectionObserver(
