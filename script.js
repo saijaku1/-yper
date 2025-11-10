@@ -17,9 +17,10 @@ const observer = new IntersectionObserver(
 
 targets.forEach((target) => observer.observe(target));
 
-const imagebutton=document.querySelector("#Stamp").addEventListener("click",()=>{
-  widnow.location.href="https://store.line.me/stickershop/product/32024119/ja";
-})
+const imagebutton = document.querySelector(".Stamp");
+imagebutton.addEventListener("click", () => {
+  window.location.href = "https://store.line.me/stickershop/product/32024119/ja";
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.createElement("div");
