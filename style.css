@@ -652,6 +652,9 @@ dd {
   display: block;
   margin: 40px auto;
 }
+.Stamp:hover {
+  cursor:pointer;
+}
 /* スマホ版 */
 @media (max-width: 768px) {
  header nav ul {
