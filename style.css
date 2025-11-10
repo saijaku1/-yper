@@ -648,6 +648,12 @@ dd {
   border-top: 1px solid #b0abab;
   padding-top: 1em;
 }
+.Stamp {
+  display: block;
+  margin: 40px auto;
+  width:550px;
+  height:150px;
+}
 /* スマホ版 */
 @media (max-width: 768px) {
  header nav ul {
@@ -799,5 +805,10 @@ header nav ul li a:hover {
   .footer-column ul li a {
     font-size: 14px;
   }
+  .Stamp {
+  display: block;
+  margin: 40px auto;
+  width:350px;
+  height:150px;
 }
-
+}
