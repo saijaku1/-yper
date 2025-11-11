@@ -55,7 +55,7 @@ header nav ul li a:hover{
     border-radius: 50%;
 }
 main .background{
-    background-image: url('../image/typing.png');
+    background-image: url('../../image/typing.png');
     background-size: cover;
     background-position: center;
     height: 600px;
