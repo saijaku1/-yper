@@ -57,7 +57,7 @@ const rawData = {
     "Eito:712pt",
     "unused_HAL:658pt",
   ],
-    div4:[
+    div5:[
     "Jaku:500pt",
     "かぼちゃ:724pt",
     "owata☆♪:589pt",
