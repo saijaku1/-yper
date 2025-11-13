@@ -6,7 +6,7 @@ const rawData = {
     "まめえだ:796打鍵",
     "ねぎろと:797打鍵",
     "だだだ:889打鍵",
-    "N.S.21:890打鍵"
+    "N.S.21:890打鍵",
     "野島:701打鍵",
     "Eito:1113打鍵",
     "かぼちゃ:1028打鍵",
@@ -22,7 +22,7 @@ const rawData = {
     "だらる:不明",
     "はっちゃん:不明",
     "円周率:不明",
-  　"柊:不明",
+    "柊:不明",
     "こたくん:不明",
     "ぬう:不明",
     "Teto:不明",
@@ -38,7 +38,9 @@ function fillTable(divId, data) {
   const players = data
     .map((e) => {
       const [name, scoreRaw] = e.split(":");
-      const scoreNum = parseInt(scoreRaw.replace(/\D/g, "")); // 数値部分だけ抜き出し
+      // 「不明」など数値が取れない場合は 0 にする
+      const match = scoreRaw.match(/\d+/);
+      const scoreNum = match ? parseInt(match[0]) : 0;
       return { name, scoreRaw, scoreNum };
     })
     .sort((a, b) => b.scoreNum - a.scoreNum); // 数値が大きいほど上位に
@@ -46,9 +48,9 @@ function fillTable(divId, data) {
   // 表に追加
   players.forEach((p, i) => {
     const row = document.createElement("tr");
-    row.innerHTML = `<td>${i + 1}位</td><td>${p.name}</td><td>${
-      p.scoreRaw
-    }</td>`;
+    row.innerHTML = `<td>${p.scoreNum ? `${i + 1}位` : "-"}</td>
+                     <td>${p.name}</td>
+                     <td>${p.scoreRaw}</td>`;
     tbody.appendChild(row);
   });
 }
@@ -63,3 +65,4 @@ document.getElementById("table-select").addEventListener("change", (e) => {
     fillTable(divId, rawData[divId]);
   }
 });
+
