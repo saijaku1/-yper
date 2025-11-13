@@ -19,6 +19,7 @@ const rawData = {
     "Jujun10:Z11",
     "にこふぁす:Z5",
     "無名:Z11",
+    "owata:Z10",
     "野島:Z6",
     "とある:Z10",
     "N.S.21:Z11",
@@ -29,8 +30,7 @@ const rawData = {
   　"柊:不明",
     "こたくん:不明",
     "ぬう:不明",
-    "Teto:不明",
-    "owata:不明",
+    "Teto:不明"
   ]
 };
 function fillTable(divId, data) {
