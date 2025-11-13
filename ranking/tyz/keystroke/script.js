@@ -14,6 +14,7 @@ const rawData = {
     "MHJ:701打鍵",
     "きる:892打鍵",
     "れんこん:840打鍵",
+    "owata:820打鍵",
     "とある:不明",
     "Jujun10:1005打鍵",
     "ガブガブ:1017打鍵",
@@ -27,8 +28,8 @@ const rawData = {
     "こたくん:不明",
     "ぬう:不明",
     "Teto:不明",
-    "owata:不明",
-  ],
+    
+  ]
 };
 
 function fillTable(divId, data) {
