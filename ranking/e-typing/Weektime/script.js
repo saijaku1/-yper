@@ -93,17 +93,24 @@ const rawData = {
 function fillTable(divId, data) {
   const tbody = document.querySelector(`#${divId} tbody`);
   tbody.innerHTML = "";
+
+  // データを整形＆スコア順にソート
   const players = data
     .map((e) => {
       const [name, scoreRaw] = e.split(":");
-      return { name, score: parseInt(scoreRaw.replace(/\D/g, "")) };
+      // 「不明」など数値が取れない場合は 0 にする
+      const match = scoreRaw.match(/\d+/,"");
+      const scoreNum = match ? parseInt(match[0]) : 0;
+      return { name, scoreRaw, scoreNum };
     })
-    .sort((a, b) => b.score - a.score);
+    .sort((a, b) => b.scoreNum - a.scoreNum); // 数値が大きいほど上位に
+
+  // 表に追加
   players.forEach((p, i) => {
     const row = document.createElement("tr");
-    row.innerHTML = `<td>${i + 1}位</td><td>${p.name}</td><td>${
-      p.score
-    }pt</td>`;
+    row.innerHTML = `<td>${p.scoreNum ? `${i + 1}位` : "-"}</td>
+                     <td>${p.name}</td>
+                     <td>${p.scoreRaw}</td>`;
     tbody.appendChild(row);
   });
 }
