@@ -384,9 +384,68 @@ select:hover {
 .menu-toggle{
  display:none;
 }
+#stats-box {
+  max-width: 700px;
+  margin: 2em auto;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 0 20px rgba(74, 2, 190, 0.3);
+}
+
+#stats-box p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+#stats-box details {
+  margin-top: 10px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+#stats-box summary {
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#stats-box table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 5px;
+  text-align: center;
+  color: white;
+}
+
+#stats-box th, #stats-box td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+#stats-box thead {
+  background: linear-gradient(90deg, var(--brand-color), #7a3df5);
+}
+
+#stats-box tbody tr:hover {
+  background: rgba(255,255,255,0.08);
+  transform: scale(1.02);
+  transition: 0.2s;
+}
+
 /* スマホ版 */
 @media (max-width: 768px) {
-
+  #stats-box {
+    padding: 10px;
+  }
+  #stats-box table th, #stats-box table td {
+    padding: 8px;
+    font-size: 0.9em;
+  }
   /* ===== ヘッダー調整 ===== */
   header {
     background-color: rgba(0, 0, 0, 0.8);
