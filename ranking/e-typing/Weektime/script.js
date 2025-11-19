@@ -1,4 +1,3 @@
-
 const rawData = {
   div1: [
     "Jaku:540pt",
@@ -29,21 +28,21 @@ const rawData = {
     "にこふぁす:415pt",
     "きる:614pt"
   ],
-   div3: [
-       "Jaku:576pt",
-      "かぼちゃ:749pt",
-       "RFれんこん:700pt",
-       "unused_HAL:655pt",
-       "だだだ:645pt",
-       "Eito:627pt",
-       "きる:596pt",
-       "†漆黒の堕天使†(MHJ):580pt",
-        "スピードアキュレイト:581pt",
-      "owata☆♪:696pt",
-      "まめえだ:561pt",
-       "HFKRU:483pt"    
+  div3: [
+    "Jaku:576pt",
+    "かぼちゃ:749pt",
+    "RFれんこん:700pt",
+    "unused_HAL:655pt",
+    "だだだ:645pt",
+    "Eito:627pt",
+    "きる:596pt",
+    "†漆黒の堕天使†(MHJ):580pt",
+    "スピードアキュレイト:581pt",
+    "owata☆♪:696pt",
+    "まめえだ:561pt",
+    "HFKRU:483pt"
   ],
-  div4:[
+  div4: [
     "Jaku:573pt",
     "かぼちゃ:780pt",
     "れんこん:680pt",
@@ -55,9 +54,9 @@ const rawData = {
     "こたくん:461pt",
     "HFKRU:444pt",
     "Eito:712pt",
-    "unused_HAL:658pt",
+    "unused_HAL:658pt"
   ],
-    div5:[
+  div5: [
     "Jaku:500pt",
     "かぼちゃ:724pt",
     "owata☆♪:589pt",
@@ -71,9 +70,9 @@ const rawData = {
     "こたくん:461pt",
     "HFKRU:422pt",
     "Eito:674pt",
-    "unused_HAL:618pt",
+    "unused_HAL:618pt"
   ],
-  div6[
+  div6: [
     "Jaku:564pt",
     "Eito:722pt",
     "かぼちゃ:705pt",
@@ -87,7 +86,7 @@ const rawData = {
     "きる:519pt",
     "HFKRU:466pt"
   ],
-  div7[]
+  div7: [] // データなしなら空配列
 };
 
 function fillTable(divId, data) {
