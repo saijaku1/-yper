@@ -46,10 +46,35 @@
     <option value="div11">第1285回 ??? 2025年 12月9日~12月16日 準備中</option>
     <option value="div12">第1286回 ??? 2025年 11月16日~11月23日 準備中</option>
 </select>
-<div id="stats-box" class="table-div">
+<div id="stats-box">
   <h3>平均データ</h3>
-  <ul id="stats-list"></ul>
+  <details open>
+    <summary>全体平均 / 各ディビ平均</summary>
+    <table id="division-avg-table">
+      <thead>
+        <tr>
+          <th>ディビ名</th>
+          <th>平均スコア</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </details>
+
+  <details open>
+    <summary>プレイヤー平均</summary>
+    <table id="player-avg-table">
+      <thead>
+        <tr>
+          <th>名前</th>
+          <th>平均スコア</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </details>
 </div>
+
 
 <div id="none" class="table-div">
  <h1>選択するとここに表示されます</h1>
