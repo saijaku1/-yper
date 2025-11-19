@@ -125,74 +125,35 @@ document.getElementById("table-select").addEventListener("change", (e) => {
   }
 });
 
-// ==== 平均計算関数 ====
-
-function calculateStats(rawData) {
-  const playerScores = {};
-  const divisionAvg = {};
-  let totalSum = 0;
-  let totalCount = 0;
-
-  for (const divKey in rawData) {
-    const arr = rawData[divKey];
-    if (!Array.isArray(arr)) continue;
-
-    let divSum = 0;
-    let divCount = 0;
-
-    arr.forEach(item => {
-      const [name, scoreRaw] = item.split(":");
-      const match = scoreRaw.match(/\d+/);
-      const score = match ? parseInt(match[0]) : 0;
-
-      if (!playerScores[name]) playerScores[name] = [];
-      playerScores[name].push(score);
-
-      divSum += score;
-      divCount++;
-
-      totalSum += score;
-      totalCount++;
-    });
-
-    divisionAvg[divKey] = Math.round(divSum / divCount);
-  }
-
-  const playerAvg = {};
-  for (const name in playerScores) {
-    const scores = playerScores[name];
-    const avg = scores.reduce((a, b) => a + b, 0) / scores.length;
-    playerAvg[name] = Math.round(avg);
-  }
-
-  const totalAvg = Math.round(totalSum / totalCount);
-
-  return { playerAvg, divisionAvg, totalAvg };
-}
-
-// ==== 平均表示用 ====
-
 function renderStats() {
   const stats = calculateStats(rawData);
-  const box = document.getElementById("stats-list");
-  box.innerHTML = "";
 
-  // 全体平均
-  box.innerHTML += `<li><strong>全体平均：</strong>${stats.totalAvg}pt</li>`;
-
-  // 各ディビ平均
-  box.innerHTML += `<br><strong>各ディビ平均</strong>`;
+  // ディビ平均
+  const divisionTable = document.querySelector("#division-avg-table tbody");
+  divisionTable.innerHTML = "";
   for (const key in stats.divisionAvg) {
-    box.innerHTML += `<li>${key}： ${stats.divisionAvg[key]}pt</li>`;
+    const row = document.createElement("tr");
+    row.innerHTML = `<td>${key}</td><td>${stats.divisionAvg[key]}pt</td>`;
+    divisionTable.appendChild(row);
   }
 
-  // プレイヤー平均（折りたたみ対応すると見やすい）
-  box.innerHTML += `<br><strong>プレイヤー平均</strong>`;
+  // プレイヤー平均
+  const playerTable = document.querySelector("#player-avg-table tbody");
+  playerTable.innerHTML = "";
   for (const name in stats.playerAvg) {
-    box.innerHTML += `<li>${name}： ${stats.playerAvg[name]}pt</li>`;
+    const row = document.createElement("tr");
+    row.innerHTML = `<td>${name}</td><td>${stats.playerAvg[name]}pt</td>`;
+    playerTable.appendChild(row);
+  }
+
+  // 全体平均を表示上部に追加
+  const statsBox = document.getElementById("stats-box");
+  if (!document.querySelector("#total-avg")) {
+    const total = document.createElement("p");
+    total.id = "total-avg";
+    total.innerHTML = `<strong>全体平均：</strong>${stats.totalAvg}pt`;
+    statsBox.prepend(total);
+  } else {
+    document.querySelector("#total-avg").innerHTML = `<strong>全体平均：</strong>${stats.totalAvg}pt`;
   }
 }
-
-// ページ読み込み時に実行
-document.addEventListener("DOMContentLoaded", renderStats);
-
