@@ -34,15 +34,17 @@ const rawData = {
   "1283回": [] // ←集計中
 };
 
-//数値抽出関数 
+// 数値抽出
 function extractScore(str) {
   const m = str.match(/\d+/);
   return m ? parseInt(m[0]) : 0;
 }
 
-//  1つのテーブル生成
+// テーブル表示
 function fillTable(divId, data) {
-  const tbody = document.querySelector(`#${divId} tbody`);
+  const tbody = document.querySelector(`#div-${divId} tbody`);
+  if (!tbody) return;
+
   tbody.innerHTML = "";
 
   const players = data
@@ -61,7 +63,7 @@ function fillTable(divId, data) {
   });
 }
 
-// 平均値計算
+// 平均計算
 function calculateStats(data) {
   const divisionAvg = {};
   const playerTotal = {};
@@ -96,11 +98,10 @@ function calculateStats(data) {
   };
 }
 
-//平均表示 
+// 平均データ描画
 function renderStats() {
   const stats = calculateStats(rawData);
 
-  // ディビ平均
   const divisionTable = document.querySelector("#division-avg-table tbody");
   divisionTable.innerHTML = "";
   for (const key in stats.divisionAvg) {
@@ -109,7 +110,6 @@ function renderStats() {
     divisionTable.appendChild(row);
   }
 
-  // プレイヤー平均（並び替え）
   const playerTable = document.querySelector("#player-avg-table tbody");
   playerTable.innerHTML = "";
 
@@ -121,26 +121,25 @@ function renderStats() {
       playerTable.appendChild(row);
     });
 
-  // 全体平均
-  document.querySelector("#total-avg")?.remove(); 
+  document.querySelector("#total-avg")?.remove();
   const total = document.createElement("p");
   total.id = "total-avg";
   total.innerHTML = `<strong>全体平均：</strong>${stats.totalAvg}pt`;
   document.getElementById("stats-box").prepend(total);
 }
 
-// ページロード/セレクト操作
+// ロード時 / セレクト時
 document.addEventListener("DOMContentLoaded", () => {
   renderStats(); // 初回表示
 
   document.getElementById("table-select").addEventListener("change", (e) => {
     document.querySelectorAll(".table-div").forEach(div => div.style.display = "none");
+
     if (e.target.value) {
       const divId = e.target.value;
-      document.getElementById(divId).style.display = "block";
+      document.getElementById(`div-${divId}`).style.display = "block";
       fillTable(divId, rawData[divId]);
       renderStats();
     }
   });
 });
-
