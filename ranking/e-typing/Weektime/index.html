@@ -1,150 +1,106 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>e-typingランキング</title>
-    <link rel="icon" href="../../../image/zetyper.png">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>e-typingランキング</title>
 </head>
-<body id="top">
-<header>
-    <nav>
-        <ul>
-            <li><img src="../../../image/zetyper.png"  id="zetyper-icon"></li>
-            <li><a href="https://zetyper.f5.si">ホーム</a></li>
-            <li><a href="https://zetyper.f5.si/survey">ζyperランク測定</a></li>
-            <li><a href="https://zetyper.f5.si/ranking">ζyperランキング</a></li>
-            <li><a href="https://zetyper.f5.si/#join">チームへの参加方法</a></li>
-            <li><a href="https://zetyper.f5.si/member">メンバー紹介</a></li>
-        </ul>
-    </nav>
-</header>
-<main>
-  <div class="button" href="#top">
-    <a href="#top" class="back-button">↑</a>
-  </div>
-    <div class="background">
-<h1 class="hidden slide-in-left delay-1">e-typingランキング</h1>
-</div>
-<div class="content">
-    <h2 class="hidden zoom-in delay-2">e-typingランキング</h2>
-    <hr class="hidden zoom-in delay-3">
+<body>
+<h1>e-typingランキング</h1>
 
 <select id="table-select">
-  <option value="none" disabled selected>-- 選択してください --</option>
-  <option value="1277回">第1277回 食感ことば ...</option>
-  <option value="1278回">第1278回 大好きなおやつ ...</option>
-  <option value="1279回">第1279回 数のある言葉 ...</option>
-  <option value="1280回">第1280回 秋の言葉 ...</option>
-  <option value="1281回">第1281回 給食のおかず ...</option>
-  <option value="1282回">第1282回 慣用句 ...</option>
-  <option value="1283回">第1283回 ??? 集計中</option>
+  <option value="" disabled selected>-- 選択してください --</option>
+  <option value="1277回">第1277回</option>
+  <option value="1278回">第1278回</option>
+  <option value="1279回">第1279回</option>
+  <option value="1280回">第1280回</option>
+  <option value="1281回">第1281回</option>
+  <option value="1282回">第1282回</option>
+  <option value="1283回">第1283回</option>
 </select>
+
 <div id="stats-box">
-  <h3>平均データ</h3>
+  <h2>平均データ</h2>
+
   <details open>
     <summary>全体平均 / 各大会平均</summary>
-    <table id="division-avg-table">
+    <table id="division-avg-table" border="1">
       <thead>
-        <tr>
-          <th>ディビ名</th>
-          <th>平均スコア</th>
-        </tr>
+        <tr><th>大会</th><th>平均スコア</th></tr>
       </thead>
       <tbody></tbody>
     </table>
   </details>
-<div id="div-1277回" class="table-div"><table><thead><tr><th>順位</th><th>名前</th><th>スコア</th></tr></thead><tbody></tbody></table></div>
-<div id="div-1278回" class="table-div"><table><thead><tr><th>順位</th><th>名前</th><th>スコア</th></tr></thead><tbody></tbody></table></div>
-<div id="div-1279回" class="table-div"><table><thead><tr><th>順位</th><th>名前</th><th>スコア</th></tr></thead><tbody></tbody></table></div>
-<div id="div-1280回" class="table-div"><table><thead><tr><th>順位</th><th>名前</th><th>スコア</th></tr></thead><tbody></tbody></table></div>
-<div id="div-1281回" class="table-div"><table><thead><tr><th>順位</th><th>名前</th><th>スコア</th></tr></thead><tbody></tbody></table></div>
-<div id="div-1282回" class="table-div"><table><thead><tr><th>順位</th><th>名前</th><th>スコア</th></tr></thead><tbody></tbody></table></div>
-<div id="div-1283回" class="table-div"><table><thead><tr><th>順位</th><th>名前</th><th>スコア</th></tr></thead><tbody></tbody></table></div>
+
+  <details open>
+    <summary>個人平均</summary>
+    <table id="player-avg-table" border="1">
+      <thead>
+        <tr><th>名前</th><th>平均スコア</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </details>
 </div>
+
+<!-- 各大会ランキングテーブル -->
+<div id="div-1277回" class="table-div">
+  <h3>第1277回ランキング</h3>
+  <table border="1">
+    <thead><tr><th>順位</th><th>名前</th><th>スコア</th></tr></thead>
+    <tbody></tbody>
+  </table>
 </div>
-    
-<footer class="footer">
-  <div class="footer-container">
-    <!-- 左側：ロゴとタイトル -->
-    <div class="footer-brand">
-      <img src="../../../image/zetyper-footer.png" width="200px" height="200px">
-      
-    </div>
 
-    <!-- 右側：フッターメニュー -->
-    <div class="footer-links">
-      <div class="footer-column">
-        <h4>ソーシャル</h4>
-        <ul>
-          <li><a href="https://www.youtube.com/@ze-taipa" target="_blank">Youtube</a></li>
-          <li><a href="https://x.com/yper343802" target="_blank">X(旧Twitter)</a></li>
-          <li><a href="https://discord.gg/sAjsFKArNw" target="_blank">Discord</a></li>
-          <li><a href="https://padlet.com/typer3915/yper-yn963c63aqw79j9p" target="_blank">Padlet</a></li>
-             <li><a href="https://ankey.io/@ze-typer" target="_blank">Ankey</a></li>
-          
-        </ul>
-      </div>
+<div id="div-1278回" class="table-div">
+  <h3>第1278回ランキング</h3>
+  <table border="1">
+    <thead><tr><th>順位</th><th>名前</th><th>スコア</th></tr></thead>
+    <tbody></tbody>
+  </table>
+</div>
 
-      <div class="footer-column">
-        <h4>開発</h4>
-        <ul>
-          <li><a href="https://zetyper.f5.si/docs" target="_blank">ドキュメント</a></li>
-          <li><a href="https://github.com/saijaku1/-yper/tree/main" target="_blank">リポジトリ</a></li>
-          <li><a href="https://zetyper.f5.si/docs/updated" target="_blank">変更履歴</a></li>
-        </ul>
-      </div>
+<div id="div-1279回" class="table-div">
+  <h3>第1279回ランキング</h3>
+  <table border="1">
+    <thead><tr><th>順位</th><th>名前</th><th>スコア</th></tr></thead>
+    <tbody></tbody>
+  </table>
+</div>
 
-      <div class="footer-column">
-        <h4>リソース</h4>
-        <ul>
-          <li><a href="https://zetyper.f5.si/docs/terms-of-service" target="_blank">利用規約</a></li>
-          <li><a href="https://zetyper.f5.si/docs/guidelines" target="_blank">ガイドライン</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<div id="div-1280回" class="table-div">
+  <h3>第1280回ランキング</h3>
+  <table border="1">
+    <thead><tr><th>順位</th><th>名前</th><th>スコア</th></tr></thead>
+    <tbody></tbody>
+  </table>
+</div>
 
-  <!-- コピーライト -->
-  <div class="footer-bottom">
-    <p>© 2025 - ζyper. 一部の画像・素材は各権利者に帰属します。</p>
-  </div>
-</footer>
-</main>
-<script>
-    const targets = document.querySelectorAll(".hidden");
+<div id="div-1281回" class="table-div">
+  <h3>第1281回ランキング</h3>
+  <table border="1">
+    <thead><tr><th>順位</th><th>名前</th><th>スコア</th></tr></thead>
+    <tbody></tbody>
+  </table>
+</div>
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      } else {
-        entry.target.classList.remove("show");
-      }
-    });
-  },
-  {
-    threshold: 0.1,
-  }
-);
+<div id="div-1282回" class="table-div">
+  <h3>第1282回ランキング</h3>
+  <table border="1">
+    <thead><tr><th>順位</th><th>名前</th><th>スコア</th></tr></thead>
+    <tbody></tbody>
+  </table>
+</div>
 
-targets.forEach((target) => observer.observe(target));
+<div id="div-1283回" class="table-div">
+  <h3>第1283回ランキング</h3>
+  <table border="1">
+    <thead><tr><th>順位</th><th>名前</th><th>スコア</th></tr></thead>
+    <tbody></tbody>
+  </table>
+</div>
 
-document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.createElement("div");
-  menuToggle.classList.add("menu-toggle");
-  menuToggle.innerHTML = "☰"; // ハンバーガーアイコン
-  document.querySelector("header nav").prepend(menuToggle);
-
-  const navMenu = document.querySelector("header nav ul");
-  menuToggle.addEventListener("click", () => {
-    navMenu.style.display = navMenu.style.display === "flex" ? "none" : "flex";
-  });
-});
-
+<script src="script.js">
 </script>
-<script src="script.js"></script>
 </body>
 </html>
