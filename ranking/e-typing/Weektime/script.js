@@ -31,7 +31,9 @@ const rawData = {
     "unused_HAL:626pt","owata☆♪:564pt","スピードアキュレイト:562pt",
     "N.S-21:550pt","まめえだ:549pt","ねぎろと:530pt","きる:519pt","HFKRU:466pt"
   ],
-  1283回: []
+  1283回: [
+   
+  ]
 };
 
 // 選択テーブルを埋める関数
@@ -136,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const divId = e.target.value;
       document.getElementById(divId).style.display = "block";
       fillTable(divId, rawData[divId]);
-      renderStats(); // 選択時に全体平均も更新
+      renderStats(); // 選択時にも更新
     }
   });
 });
