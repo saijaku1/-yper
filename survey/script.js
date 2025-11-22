@@ -79,9 +79,6 @@ form.addEventListener("submit", function(event) {
   $("rank").textContent=ranks[rank];
   if (rank!==50){
     $("tonext").textContent = scores[rank+1]-score;
-  console.log("rec:", rec);
-  console.log("score:", score);
-  console.log("rank:", rank);
   };
 });
 $("reset").addEventListener("click", () => {
