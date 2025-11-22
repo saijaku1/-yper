@@ -77,6 +77,9 @@ form.addEventListener("submit", function(event) {
     };
   };
   $("rank").textContent=ranks[rank];
+  if (rank!==50){
+    $("tonext").textContent = scores[rank+1]-score;
+  };
 });
 $("reset").addEventListener("click", () => {
   inputs.forEach(id => {
