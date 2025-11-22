@@ -78,7 +78,7 @@ form.addEventListener("submit", function(event) {
     };
   };
   $("rank").textContent=ranks[rank];
-  if (rank!==length(ranks)-1){
+  if (rank!==ranks.length-1){
     $("tonext").textContent = scores[rank+1]-score;
   };
   $("rank").style.color = colors[rank];
