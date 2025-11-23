@@ -78,7 +78,7 @@ form.addEventListener("submit", function(event) {
   $("result").textContent = "合計で" + score + "pt"; 
   let rank=Math.floor(score/150);
   if(rank>ranks.length-1){
-    rank=ranks.length-1
+    rank=ranks.length-1;
   };
   $("rank").textContent=ranks[rank];
   if (rank!==ranks.length-1){
