@@ -73,11 +73,11 @@ form.addEventListener("submit", function(event) {
                            1000*((rec[2]/1100)**1.5)+
                            1000*((rec[3]*2/1000)**1.5)+
                            1000*((rec[4]/4200)**1.5)+
-                           1000*((rec[0]/2800)**1.5)
+                           1000*((rec[5]/2800)**1.5)
                           );
   $("result").textContent = "合計で" + score + "pt"; 
-  rank=math.floor(score/150);
-  if(rank>ranks.length-1)){
+  let rank=Math.floor(score/150);
+  if(rank>ranks.length-1){
     rank=ranks.length-1
   };
   $("rank").textContent=ranks[rank];
