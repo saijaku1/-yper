@@ -68,12 +68,12 @@ inputs.forEach(id => {
 form.addEventListener("submit", function(event) {
   event.preventDefault(); 
   let rec = inputs.map(id => Number($(id).value));
-  const score = Math.floor(1000*((rec[0]/850)**1.5)+
-                           1000*((rec[1]/1000)**1.5)+
-                           1000*((rec[2]/1100)**1.5)+
-                           1000*((rec[3]*2/1000)**1.5)+
-                           1000*((rec[4]/4200)**1.5)+
-                           1000*((rec[5]/2800)**1.5)
+  const score = Math.floor(1000*((rec[0]/850)**1.5)*1.0+
+                           1000*((rec[1]/1000)**1.5)*0.8+
+                           1000*((rec[2]/1100)**1.5)*0.8+
+                           1000*((rec[3]*2/1000)**1.5)*0.8+
+                           1000*((rec[4]/4200)**1.5)*0.1+
+                           1000*((rec[5]/2800)**1.5)*0.1
                           );
   $("result").textContent = "合計で" + score + "pt"; 
   let rank=Math.floor(score/150);
