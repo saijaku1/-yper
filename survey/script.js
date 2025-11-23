@@ -84,7 +84,7 @@ form.addEventListener("submit", function(event) {
   if (rank!==ranks.length-1){
     $("tonext").textContent = (rank+1)*150-score;
   };
-  $("rank").style.color = colors[rank]+"-webkit-text-stroke: 2px white";
+  $("rank").style.color = colors[rank];
 });
 $("reset").addEventListener("click", () => {
   inputs.forEach(id => {
