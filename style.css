@@ -651,6 +651,7 @@ dd {
 .Stamp {
   display: block;
   margin: 40px auto;
+  width: 550px;
 }
 .Stamp:hover {
   cursor:pointer;
@@ -785,7 +786,9 @@ header nav ul li a:hover {
   .flow > li dl::after {
     display: none;
   }
-
+  .Stamp{
+    width: 300px;
+  }
   /* ===== フッター ===== */
   .footer-container {
     flex-direction: column;
