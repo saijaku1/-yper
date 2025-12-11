@@ -22,18 +22,13 @@ imagebutton.addEventListener("click", () => {
   window.location.href = "https://store.line.me/stickershop/product/32024119/ja";
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.createElement("div");
-  menuToggle.classList.add("menu-toggle");
-  menuToggle.innerHTML = "☰"; 
-  document.querySelector("header nav").prepend(menuToggle);
+const hamburger = document.getElementById("hamburger");
+const sidebar = document.getElementById("sidebar");
 
-  const navMenu = document.querySelector("header nav ul");
-  menuToggle.addEventListener("click", () => {
-    navMenu.style.display = navMenu.style.display === "flex" ? "none" : "flex";
-  });
+hamburger.addEventListener("click", () => {
+  const isOpen = sidebar.style.width === "250px";
+  sidebar.style.width = isOpen ? "0" : "250px";
+  sidebar.style.zIndex = isOpen ? "0" : "1000";
+  sidebar.style.display = "block";
+  hamburger.classList.toggle("active");
 });
-
-const button=document.querySelector("#read-button").addEventListener("click",()=>{
-  window.location.href="https://zetyper.f5.si/notice/Beta";
-})
