@@ -8,36 +8,114 @@ body {
   padding: 0;
   background-color: #000000;
 }
+  .fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
 
-header {
-  background-color: transparent;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  backdrop-filter: blur(10px);
-  padding: 15px 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  z-index: 100;
+  .fixed ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .fixed a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    position: relative;
+  }
+
+  .fixed a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #2f91fa;
+    transition: 0.3s;
+  }
+  .fixed a:hover::after {
+    width: 100%;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 0;
+    background: rgba(10, 10, 10, 0.95);
+    overflow-x: hidden;
+    transition: width 0.3s ease;
+    z-index: 999;
+    padding-top: 60px;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sidebar ul li {
+    padding: 20px 30px;
+    border-bottom: 1px solid #333;
+  }
+
+  .sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.15rem;
+  }
+
+  .sidebar ul li a:hover {
+    color: #2f91fa;
+  }
+
+  .hamburger {
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .hamburger span {
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    border-radius: 4px;
+    transition: 0.3s ease;
+  }
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 5px);
 }
 
-header nav ul {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
 }
 
-header nav ul li {
-  margin-right: 20px;
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -6px);
 }
-
-header nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 16px;
-}
-
 #zetyper-icon {
   height: 50px;
   width: 50px;
@@ -333,15 +411,24 @@ dialog img{
   .footer-column {
     margin-bottom: 1em;
   }
-  header nav ul li {
-    margin: 0 10px;
+
+   .fixed ul {
+    display:none;
   }
-  header nav ul li a {
-    font-size: 16px;
+
+  .fixed a {
+    font-size: 1rem;
   }
-  header {
-    display: none;
+
+  .hamburger {
+    top: 10px;
+    left: 10px;
   }
+
+  .sidebar ul li {
+    padding: 12px 20px;
+  }
+   
   .member-list ul {
     flex-direction: column;
     align-items: center;
