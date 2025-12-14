@@ -17,14 +17,13 @@ const observer = new IntersectionObserver(
 
 targets.forEach((target) => observer.observe(target));
 
-document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.createElement("div");
-  menuToggle.classList.add("menu-toggle");
-  menuToggle.innerHTML = "☰"; // ハンバーガーアイコン
-  document.querySelector("header nav").prepend(menuToggle);
+const hamburger = document.getElementById("hamburger");
+const sidebar = document.getElementById("sidebar");
 
-  const navMenu = document.querySelector("header nav ul");
-  menuToggle.addEventListener("click", () => {
-    navMenu.style.display = navMenu.style.display === "flex" ? "none" : "flex";
-  });
+hamburger.addEventListener("click", () => {
+  const isOpen = sidebar.style.width === "250px";
+  sidebar.style.width = isOpen ? "0" : "250px";
+  sidebar.style.zIndex = isOpen ? "0" : "1000";
+  sidebar.style.display = "block";
+  hamburger.classList.toggle("active");
 });
