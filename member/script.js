@@ -42,3 +42,14 @@ closeBtns.forEach(btn => {
     document.body.classList.remove('no-scroll'); 
   });
 });
+
+const hamburger = document.getElementById("hamburger");
+const sidebar = document.getElementById("sidebar");
+
+hamburger.addEventListener("click", () => {
+  const isOpen = sidebar.style.width === "250px";
+  sidebar.style.width = isOpen ? "0" : "250px";
+  sidebar.style.zIndex = isOpen ? "0" : "1000";
+  sidebar.style.display = "block";
+  hamburger.classList.toggle("active");
+});
