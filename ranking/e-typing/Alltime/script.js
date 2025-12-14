@@ -54,10 +54,6 @@ document.getElementById("table-select").addEventListener("change", (e) => {
     fillTable(divId, rawData[divId]);
   }
 });
-const imagebutton = document.querySelector(".Stamp");
-imagebutton.addEventListener("click", () => {
-  window.location.href = "https://store.line.me/stickershop/product/32024119/ja";
-});
 
 const hamburger = document.getElementById("hamburger");
 const sidebar = document.getElementById("sidebar");
