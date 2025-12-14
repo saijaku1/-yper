@@ -17,19 +17,16 @@ const observer = new IntersectionObserver(
 
 targets.forEach((target) => observer.observe(target));
 
-document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.createElement("div");
-  menuToggle.classList.add("menu-toggle");
-  menuToggle.innerHTML = "☰"; // ハンバーガーアイコン
+const hamburger = document.getElementById("hamburger");
+const sidebar = document.getElementById("sidebar");
 
-  document.querySelector("header nav").prepend(menuToggle);
-
-  const navMenu = document.querySelector("header nav ul");
-  menuToggle.addEventListener("click", () => {
-    navMenu.style.display = navMenu.style.display === "flex" ? "none" : "flex";
-  });
+hamburger.addEventListener("click", () => {
+  const isOpen = sidebar.style.width === "250px";
+  sidebar.style.width = isOpen ? "0" : "250px";
+  sidebar.style.zIndex = isOpen ? "0" : "1000";
+  sidebar.style.display = "block";
+  hamburger.classList.toggle("active");
 });
-
 // データ
 const rawData = {
   "1277回": ["Jaku:540pt","HFKRU:533pt","Eito:744pt","かぼちゃ:769pt","狂:682pt","unused_HAL:650pt","まめえだ:624pt","だだだ:624pt","スピードアキュレイト:620pt","まっつん:608pt","ねぎろと:581pt","れんこん:671pt","とある:795pt","きる:659pt"],
