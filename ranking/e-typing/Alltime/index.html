@@ -137,21 +137,6 @@ const observer = new IntersectionObserver(
     threshold: 0.1,
   }
 );
-
-targets.forEach((target) => observer.observe(target));
-
-document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.createElement("div");
-  menuToggle.classList.add("menu-toggle");
-  menuToggle.innerHTML = "☰"; // ハンバーガーアイコン
-  document.querySelector("header nav").prepend(menuToggle);
-
-  const navMenu = document.querySelector("header nav ul");
-  menuToggle.addEventListener("click", () => {
-    navMenu.style.display = navMenu.style.display === "flex" ? "none" : "flex";
-  });
-});
-
 </script>
 <script src="script.js"></script>
 </body>
