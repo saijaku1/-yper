@@ -1,93 +1,95 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>メンバー紹介</title>
-    <link rel="icon" href="../../image/zetyper.png">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>メンバー紹介</title>
+  <link rel="icon" href="../../image/zetyper.png">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="fixed">
-      <nav>
-        <ul>
-          <li><a href="../">ホーム</li>
-          <li><a href="../ranking">ζyperランキング</a></li>
-          <li><a href="../survey">ζyperランク測定</a></li>
-          <li><a href="../#join">チームへの参加方法</a></li>
-          <li><a href="../docs">ドキュメント</a></li>
-        </ul>
-      </nav>
-    </div>
 
+<body id="top">
 
-  <div id="sidebar" class="sidebar">
-  <div class="logo"></div>
-    <img src="../image/zetyper.png" width="60" height="60" style="margin: 20px; border-radius:50%;">
-  <h3>ζyper</h3>  
-  <ul>    
-          <li><a href="../">ホーム</li>
-          <li><a href="../ranking">ζyperランキング</a></li>
-          <li><a href="../survey">ζyperランク測定</a></li>
-          <li><a href="../#join">チームへの参加方法</a></li>
-          <li><a href="../docs">ドキュメント</a></li>
-          <p style="color:white; padding-left:20px;">&copy;2025  ζyper.</p>
-        </ul>
+<div class="fixed">
+  <nav>
+    <ul>
+      <li><a href="../">ホーム</a></li>
+      <li><a href="../ranking">ζyperランキング</a></li>
+      <li><a href="../survey">ζyperランク測定</a></li>
+      <li><a href="../#join">チームへの参加方法</a></li>
+      <li><a href="../docs">ドキュメント</a></li>
     </ul>
+  </nav>
+</div>
+
+<div id="sidebar" class="sidebar">
+  <img src="../image/zetyper.png" width="60" height="60" style="margin:20px;border-radius:50%;">
+  <h3>ζyper</h3>
+  <ul>
+    <li><a href="../">ホーム</a></li>
+    <li><a href="../ranking">ζyperランキング</a></li>
+    <li><a href="../survey">ζyperランク測定</a></li>
+    <li><a href="../#join">チームへの参加方法</a></li>
+    <li><a href="../docs">ドキュメント</a></li>
+  </ul>
+  <p style="color:white;padding-left:20px;">&copy;2025 ζyper.</p>
+</div>
+
+<div id="hamburger" class="hamburger">
+  <span></span><span></span><span></span>
+</div>
+
+<div class="button">
+  <a href="#top" class="back-button">↑</a>
+</div>
+
+<select id="memberSelect">
+  <option value="">メンバー 一覧</option>
+  <option value="Negiroto">ねぎろと</option>
+  <option value="Jaku">Jaku</option>
+  <option value="Dadada">だだだ</option>
+  <option value="Kiru">きる</option>
+  <option value="Hal">unused_HAL</option>
+  <option value="HFKRU">HFKRU</option>
+  <option value="Gabugabu">ガブガブ</option>
+  <option value="Kyou">狂</option>
+  <option value="Hatimityu">はちみちゅ</option>
+  <option value="MHJ">MHJ</option>
+  <option value="SPA">スピードアキュレイト</option>
+  <option value="Kabotya">かぼちゃ</option>
+  <option value="Mameeda">まめえだ</option>
+  <option value="Eito">えいと</option>
+  <option value="Mattunn">まっつん</option>
+  <option value="Renkon">れんこん</option>
+  <option value="Atarimae">当たり前体操</option>
+  <option value="Shirasu">しらす</option>
+</select>
+
+<main>
+  <div class="background">
+    <h1 class="fade-in">メンバー紹介</h1>
   </div>
 
-  <div id="hamburger" class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
- <div class="button" href="#top">
-    <a href="#top" class="back-button">↑</a>
-  </div>
- <select id="memberSelect">
-    <option value="">メンバー 一覧</option>
-    <option value="Negiroto">ねぎろと</option>
-     <option value="Jaku">Jaku</option>
-    <option value="Dadada">だだだ</option>
-    <option value="Kiru">きる</option>
-     <option value="Hal">unused_HAL</option>
-    <option value="HFKRU">HFKRU</option>
-     <option value="Gabugabu">ガブガブ</option>
-    <option value="Kyou">狂</option>
-    <option value="MHJ">MHJ</option>
-    <option value="SPA">スピードアキュレイト</option>
-    <option value="Kabotya">かぼちゃ</option>
-    <option value="Mameeda">まめえだ</option>
-    <option value="Eito">えいと</option>
-    <option value="Mattunn">まっつん</option>
-    <option value="Renkon">れんこん</option>
-    <option value="Atarimae">当たり前体操</option>
-     <option value="Shirasu">しらす</option>
-  </select>
-<main>
-    <div class="background">
-        <h1 class="fade-in">メンバー紹介</h1>
-    </div>
-    <section>
-        <div class="member-list">
-            <ul>
-          <li class="card">
-  <img src="../../image/Negitoro.jpg" class="li-image" id="Negiroto" alt="Jaku">
+  <section>
+    <div class="member-list">
+      <ul>
+
+<li class="card" id="Negiroto">
+  <img src="../../image/Negitoro.jpg" class="li-image" alt="ねぎろと">
   <h3>ねぎろと</h3>
   <p>ねぎろとです</p>
   <p>ねぎとろではありません</p>
- <p>目立った記録はありませんが中級者なりに頑張っている人です</p>
+  <p>目立った記録はありませんが中級者なりに頑張っている人です</p>
   <button class="openBtn" data-target="Negiroto-dialog">運指を見る</button>
   <dialog id="Negiroto-dialog">
-    <h3 style="color:#333;">ねぎろとの運指</h3>
+    <h3>ねぎろとの運指</h3>
     <img src="../../fingering/Negitorounyubi.jpg" class="fingering-image">
     <button class="closeBtn">閉じる</button>
   </dialog>
 </li>
-                
-<!-- Jaku -->
-<li class="card">
-  <img src="../../image/AIJaku.png" class="li-image" id="Jaku" alt="Jaku">
+
+<li class="card" id="Jaku">
+  <img src="../../image/AIJaku.png" class="li-image" alt="Jaku">
   <h3>Jaku</h3>
   <p>タイピング歴　1年半 (もうすぐで2年経つ)</p>
   <p>正確性を鍛えてる乱打タイパー</p>
@@ -98,43 +100,41 @@
   <p>FNF好きな人はXのDMでいつでも連絡してください！</p>
   <button class="openBtn" data-target="Jaku-dialog">運指を見る</button>
   <dialog id="Jaku-dialog">
-    <h3 style="color:#333;">JAKUの運指</h3>
+    <h3>Jakuの運指</h3>
     <img src="../../fingering/JAKU_UNNYUBI.jpg" class="fingering-image">
     <button class="closeBtn">閉じる</button>
   </dialog>
 </li>
 
-<!-- HFKRU -->
-<li class="card">
-  <img src="../../image/HFKRU.png" class="li-image" alt="メンバー3">
+<li class="card" id="HFKRU">
+  <img src="../../image/HFKRU.png" class="li-image" alt="HFKRU">
   <h3>HFKRU_Typing</h3>
   <p>e-typing　544pt</p>
   <p>Tyz　655打鍵/分</p>
   <p>Pop 　47,095粒</p>
   <p>
     主なのはこんなもんです。詳しくは
-    <a href="https://twpf.jp/HFKRU_Typing" style="color:white;">ツイフィール</a>
+    <a href="https://twpf.jp/HFKRU_Typing" target="_blank">ツイフィール</a>
     を御覧ください（（書くのめんどいだけやん
   </p>
   <button class="openBtn" data-target="HFKRU-dialog">運指を見る</button>
   <dialog id="HFKRU-dialog">
-    <h3 style="color:#333;">HFKRU_Typingの運指</h3>
+    <h3>HFKRU_Typingの運指</h3>
     <img src="../../fingering/HFKRU-UNNYUBI.png" class="fingering-image">
     <button class="closeBtn">閉じる</button>
   </dialog>
 </li>
-                
-  <li class="card">
-  <img src="../../image/gabugabu.png" class="li-image" id="Gabugabu" alt="メンバー3">
+
+<li class="card" id="Gabugabu">
+  <img src="../../image/gabugabu.png" class="li-image" alt="ガブガブ">
   <h3>ガブガブ</h3>
   <p>エタイ850</p>
   <p>過去の記録に縋りまくってるタイピングしてないタイパー</p>
   <p>韓国語が少し打てるが話せない</p>
 </li>
 
-<!-- SpeedAccurate -->
-<li class="card">
-  <img src="../../image/SpeedAccurate.jpg" class="li-image" id="SPA" alt="メンバー3">
+<li class="card" id="SPA">
+  <img src="../../image/SpeedAccurate.jpg" class="li-image" alt="スピードアキュレイト">
   <h3>スピードアキュレイト</h3>
   <p>タイピング歴2025年2月～</p>
   <p>スピードアキュレイトです。</p>
@@ -143,210 +143,194 @@
   <p>エタイがとても苦手です！</p>
   <p>単語や長文が苦手で短文が得意。</p>
   <p>初速が死んでおり正確性も死んでいる</p>
-  <p>伸びしろはあるはず </p>
+  <p>伸びしろはあるはず</p>
   <button class="openBtn" data-target="SPA-dialog">運指を見る</button>
   <dialog id="SPA-dialog">
-    <h3 style="color:#333;">スピードアキュレイトの運指</h3>
+    <h3>スピードアキュレイトの運指</h3>
     <img src="../../fingering/SPA-UNNYUBI.jpg" class="fingering-image">
     <button class="closeBtn">閉じる</button>
   </dialog>
 </li>
-                <li class="card" id="Dadada">
-                    <img src="../../image/dadada.png" class="li-image" alt="XOXO_Typing">
-                    <h3>だだだ</h3>
-                    <p>タイピング歴　2023年8月～</p>
-                    <p>初速が調子の悪い時だと平均0.5を上回る</p>
-                    <p>調子が良くても0.45くらいととても遅い。</p>
-                    <p>最近はエタイの調子が悪いがほかのサイトは記録を更新している。</p>
-                    <p>得意なタイピングサイトは打鍵トレーナーとタイピンガーZ</p>
-                    <p>タイピング目標は選抜タイパー入り、RTC優勝</p>
-                      <button class="openBtn" data-target="Dadada-dialog">運指を見る</button>
+
+<li class="card" id="Dadada">
+  <img src="../../image/dadada.png" class="li-image" alt="だだだ">
+  <h3>だだだ</h3>
+  <p>タイピング歴　2023年8月～</p>
+  <p>初速が調子の悪い時だと平均0.5を上回る</p>
+  <p>調子が良くても0.45くらいととても遅い。</p>
+  <p>最近はエタイの調子が悪いがほかのサイトは記録を更新している。</p>
+  <p>得意なタイピングサイトは打鍵トレーナーとタイピンガーZ</p>
+  <p>タイピング目標は選抜タイパー入り、RTC優勝</p>
+  <button class="openBtn" data-target="Dadada-dialog">運指を見る</button>
   <dialog id="Dadada-dialog">
-    <h3 style="color:#333;">だだだの運指</h3>
+    <h3>だだだの運指</h3>
     <img src="../../fingering/dadadaunyubi.png" class="fingering-image">
     <button class="closeBtn">閉じる</button>
   </dialog>
-                </li>
-                     <li class="card" id="Kiru">
-                    <img src="../../image/Kiru.png" class="li-image" alt="Kiru">
-                    <h3>きる</h3>
-                    <p>タイピング歴　2020年 12月~</p>
-                    <p>Popタイピング7万粒　タイピンガーZ　892打鍵</p>
-                    <p>だが、エタイは苦手なため、　645pt</p>
-                    <p>ζyperの中では中堅の立ち位置にある。</p>
-                    <p>タイピング以外で得意なのは、画像編集と動画編集</p>
-                </li>
-                    <li class="card" id="Hal">
-                    <img src="../../image/HAL.png" class="li-image" alt="Kiru">
-                    <h3>unused_HAL</h3>
-                    <p>中堅乱打タイパーですが、よろしくお願いします。</p>
-                    <p>速は平均くらいです（大体0.45秒前後)</p>
-                    <p>寿司打お手軽11,580円お得（102皿）</p>
-                    <p>エタイR658pt K362pt</p>
-                    <p>タイプウェルR常用ZI</p>
-                    <p>タイピンガーZ 850打鍵</p>
-                     <button class="openBtn" data-target="Hal-dialog">運指を見る</button>
-                     <dialog id="Hal-dialog">
-    <h3 style="color:#333;">unused_HALの運指</h3>
+</li>
+
+<li class="card" id="Kiru">
+  <img src="../../image/Kiru.png" class="li-image" alt="きる">
+  <h3>きる</h3>
+  <p>タイピング歴　2020年 12月~</p>
+  <p>Popタイピング7万粒　タイピンガーZ　892打鍵</p>
+  <p>だが、エタイは苦手なため、　645pt</p>
+  <p>ζyperの中では中堅の立ち位置にある。</p>
+  <p>タイピング以外で得意なのは、画像編集と動画編集</p>
+</li>
+
+<li class="card" id="Hal">
+  <img src="../../image/HAL.png" class="li-image" alt="unused_HAL">
+  <h3>unused_HAL</h3>
+  <p>中堅乱打タイパーですが、よろしくお願いします。</p>
+  <p>速は平均くらいです（大体0.45秒前後)</p>
+  <p>寿司打お手軽11,580円お得（102皿）</p>
+  <p>エタイR658pt K362pt</p>
+  <p>タイプウェルR常用ZI</p>
+  <p>タイピンガーZ 850打鍵</p>
+  <button class="openBtn" data-target="Hal-dialog">運指を見る</button>
+  <dialog id="Hal-dialog">
+    <h3>unused_HALの運指</h3>
     <img src="../../fingering/HAL_unnyubi.png" class="fingering-image">
     <button class="closeBtn">閉じる</button>
   </dialog>
-                </li>
-                 <li class="card">
-                    <img src="../../image/kyou.jpg" class="li-image" id="Kyou" alt="メンバー3">
-                    <h3>狂</h3>
-                    <p>海王星に住んでいる室外機です</p>
-                    <p>よく変換ミスします</p>
-                    <p>怠慢タイパーです</p>
-                    <p>タイピング歴2021年9月　4年やってる割には遅い</p>
-                     <p>エタイR720 E556</p>      
-                     <p>タイピンガーz 862打鍵/糞</p>
-                     <button class="openBtn" data-target="KYOU-dialog">運指を見る</button>
+</li>
+
+<li class="card" id="Hatimityu">
+  <img src="../../image/Hatimityu.png" class="li-image" alt="はちみちゅ">
+  <h3>はちみちゅ</h3>
+  <p>はちみちゅです</p>
+  <p>初速と最高速はまあまあ速いですけど</p>
+  <p>対戦よろしくお願いします</p>
+  <button class="openBtn" data-target="Hatimityu-dialog">運指を見る</button>
+  <dialog id="Hatimityu-dialog">
+    <h3>はちみちゅの運指</h3>
+    <img src="../../fingering/HATIMITYU_UNNYUBI.png" class="fingering-image">
+    <button class="closeBtn">閉じる</button>
+  </dialog>
+</li>
+
+<li class="card" id="Kyou">
+  <img src="../../image/kyou.jpg" class="li-image" alt="狂">
+  <h3>狂</h3>
+  <p>海王星に住んでいる室外機です</p>
+  <p>よく変換ミスします</p>
+  <p>怠慢タイパーです</p>
+  <p>タイピング歴2021年9月　4年やってる割には遅い</p>
+  <p>エタイR720 E556</p>
+  <p>タイピンガーz 862打鍵/糞</p>
+  <button class="openBtn" data-target="KYOU-dialog">運指を見る</button>
   <dialog id="KYOU-dialog">
-    <h3 style="color:#333;">狂の運指</h3>
+    <h3>狂の運指</h3>
     <img src="../../fingering/KYOU-UNNYUBI.png" class="fingering-image">
     <button class="closeBtn">閉じる</button>
   </dialog>
-                </li>
-                <li class="card">
-                    <img src="../../image/MHJ.png" class="li-image" id="MHJ" alt="メンバー3">
-                    <h3>MHJ</h3>
-                    <p>タイピング歴　1年6ヶ月</p>
-                    <p>e-typing　643pt</p>
-                    <p>最初の文からの加速力に自信を持っている</p>
-                    <p>タイピングは友達に挑発されて始めた<br>というなんともｷｯｽﾞらしい動機ではじめた</p>
-                     <p>目標はe-typing　R腕試し1000pt</p> 
-                    <button class="openBtn" data-target="MHJ-dialog">運指を見る</button>
-                     <dialog id="MHJ-dialog">
-    <h3 style="color:#333;">MHJの運指</h3>
+</li>
+
+<li class="card" id="MHJ">
+  <img src="../../image/MHJ.png" class="li-image" alt="MHJ">
+  <h3>MHJ</h3>
+  <p>タイピング歴　1年6ヶ月</p>
+  <p>e-typing　643pt</p>
+  <p>最初の文からの加速力に自信を持っている</p>
+  <p>タイピングは友達に挑発されて始めた<br>というなんともｷｯｽﾞらしい動機ではじめた</p>
+  <p>目標はe-typing　R腕試し1000pt</p>
+  <button class="openBtn" data-target="MHJ-dialog">運指を見る</button>
+  <dialog id="MHJ-dialog">
+    <h3>MHJの運指</h3>
     <img src="../../fingering/MHJ-UNNYUBI.png" class="fingering-image">
     <button class="closeBtn">閉じる</button>
   </dialog>
-                </li>
-                <li class="card">
-                    <img src="../../image/Kabotya.png" class="li-image" id="Kabotya" alt="メンバー3">
-                    <h3>かぼちゃ</h3>
-                    <p>タイピング歴 2021年 4月頃～</p>
-                  <p>速度特化型と自負してますが<br>ζyper内ではそこまで目立つ存在ではありません。</p>
-                  <p>キーボードは、(Eitoに憧れて購入した)<b>BFKB113PBK</b>を使用しています。</p>
-                  <p>爆発力はあまりなく、基本的に安定しています(自己評価)。最適化をあまりしないので、それを課題として打ちにくい文でも速度を出せるようにしていきたいです。</p>
-                <p>タイピング目標は、e-typing 850pt、タイピンガーZ 1000打鍵、タイピング速度測定 測定不能（500タイプ）、打鍵トレーナー 1000打鍵です</p>
-                    <button class="openBtn" data-target="Kabocha-dialog">運指を見る</button>
+</li>
+
+<li class="card" id="Kabotya">
+  <img src="../../image/Kabotya.png" class="li-image" alt="かぼちゃ">
+  <h3>かぼちゃ</h3>
+  <p>タイピング歴 2021年 4月頃～</p>
+  <p>速度特化型と自負してますが<br>ζyper内ではそこまで目立つ存在ではありません。</p>
+  <p>キーボードは、(Eitoに憧れて購入した)<b>BFKB113PBK</b>を使用しています。</p>
+  <p>爆発力はあまりなく、基本的に安定しています(自己評価)。</p>
+  <p>タイピング目標は、e-typing 850pt、タイピンガーZ 1000打鍵、打鍵トレーナー 1000打鍵です</p>
+  <button class="openBtn" data-target="Kabocha-dialog">運指を見る</button>
   <dialog id="Kabocha-dialog">
-    <h3 style="color:#333;">かぼちゃ運指</h3>
+    <h3>かぼちゃの運指</h3>
     <img src="../../fingering/Kabocha-unnyubi.png" class="fingering-image">
     <button class="closeBtn">閉じる</button>
   </dialog>
-                </li>
-                     <li class="card">
-                    <img src="../../image/mameeda.jpg" class="li-image" id="Mameeda" alt="メンバー3">
-                    <h3>まめえだ</h3>
-                    <p>タイピング歴　たぶん1年（？）　たぶん違う（</p>
-                  <p>初速重視寸止めタイパー。</p>
-                  <p>チーム内でもかなり英語が得意</p>
-                  <p>ちなみに初速速いと言われるが測ったことはない</p>
-                  <p>エタイ634　pop56846か56848</p> 
-                  <p>高速タイピング723</p>
-                               <button class="openBtn" data-target="MAMEEDA-dialog">運指を見る</button>
+</li>
+
+<li class="card" id="Mameeda">
+  <img src="../../image/mameeda.jpg" class="li-image" alt="まめえだ">
+  <h3>まめえだ</h3>
+  <p>タイピング歴　たぶん1年（？）　たぶん違う（</p>
+  <p>初速重視寸止めタイパー。</p>
+  <p>チーム内でもかなり英語が得意</p>
+  <p>エタイ634　pop56846か56848</p>
+  <p>高速タイピング723</p>
+  <button class="openBtn" data-target="MAMEEDA-dialog">運指を見る</button>
   <dialog id="MAMEEDA-dialog">
-    <h3 style="color:#333;">まめえだの運指</h3>
+    <h3>まめえだの運指</h3>
     <img src="../../fingering/MAMEEDA-UNNYUBI.png" class="fingering-image">
     <button class="closeBtn">閉じる</button>
   </dialog>
-                </li>
-                 <li class="card">
-                    <img src="../../image/Eito.png" class="li-image" id="Eito" alt="メンバー3">
-                    <h3>Eito</h3>
-                  <p>タイピング歴　約3年</p>
-<p>キーボードは基本的にBFKB113PBK を使用しています。<br>(Neutral系では学パソを使用します)</p>
-<p>14歳で受験生やってます。</p>
-<p>最終的な目標は...RTC出場です。</p>
-                </li>
-                  <li class="card">
-                    <img src="../../image/mattunn.png" class="li-image" id="Mattunn" alt="メンバー3">
-                    <h3>まっつん</h3>
-                  <p>タイピング歴　4年ぐらい</p>
-                  <p>e-typing　708pt</p>
-                  <p>変態運指＋学校パソコン勢です。</p>
-                  <p>typing-tubeに主に生息しています。学校のパソコンをもらった時からずっと打ち込んでいる何とも変な人です。</p>
-                </li>
-                  <li class="card">
-                    <img src="../../image/renkon.jpeg" class="li-image" id="Renkon" alt="メンバー3">
-                    <h3>れんこん</h3>
-                  <p>よく大会に出ていてタイピングサイト全般を遊んでいて歌詞タイピングが特に好きです</p>
-                </li>
-                   </li>
-                  <li class="card">
-                    <img src="../../image/Atarimae.jpg" class="li-image" id="Atarimae" alt="メンバー3">
-                    <h3>当たり前体操</h3>
-                  <p>タイピング歴2021年6月〜</p>
-<p>特徴エタイスコアとtyzの記録が別れすぎてるタイパー(？)</p>
-                <p>目標:z10討伐</p>
-                </li>
-                 <li class="card">
-                    <img src="../../image/Shirasu.jpg" class="li-image" id="Shirasu" alt="NO IMAGE">
-                    <h3>しらす</h3>
-                
-                   <p>タイピング歴2021年4月〜</p>
-                   <p>本気でやった半年弱の期間でエタイ300からエタイ622まで上げた</p>
-                   <p>エタイ最高記録626</p>
-                    <p>打トレ最高記録722</p>
-                    <p>pop最高記録57163</p>
-                    <p>今は引退パーなので基本はタイピングはしないができそうな時は大会などにも参加するかもしれない</p>
-                    <p>正確性と初速は自信があり</p>
-                    <p>正確性は大抵98％以上</p> 
-                    <p>初速は大抵0.39最高0.31</p>
-                </li>
-            </ul>
-        </div>
-    </section>
+</li>
+
+<li class="card" id="Eito">
+  <img src="../../image/Eito.png" class="li-image" alt="Eito">
+  <h3>Eito</h3>
+  <p>タイピング歴　約3年</p>
+  <p>キーボードは基本的にBFKB113PBK を使用しています。</p>
+  <p>14歳で受験生やってます。</p>
+  <p>最終的な目標は...RTC出場です。</p>
+</li>
+
+<li class="card" id="Mattunn">
+  <img src="../../image/mattunn.png" class="li-image" alt="まっつん">
+  <h3>まっつん</h3>
+  <p>タイピング歴　4年ぐらい</p>
+  <p>e-typing　708pt</p>
+  <p>変態運指＋学校パソコン勢です。</p>
+</li>
+
+<li class="card" id="Renkon">
+  <img src="../../image/renkon.jpeg" class="li-image" alt="れんこん">
+  <h3>れんこん</h3>
+  <p>よく大会に出ていて歌詞タイピングが特に好きです</p>
+</li>
+
+<li class="card" id="Atarimae">
+  <img src="../../image/Atarimae.jpg" class="li-image" alt="当たり前体操">
+  <h3>当たり前体操</h3>
+  <p>タイピング歴2021年6月〜</p>
+  <p>特徴エタイスコアとtyzの記録が別れすぎてるタイパー(？)</p>
+  <p>目標:z10討伐</p>
+</li>
+
+<li class="card" id="Shirasu">
+  <img src="../../image/Shirasu.jpg" class="li-image" alt="しらす">
+  <h3>しらす</h3>
+  <p>タイピング歴2021年4月〜</p>
+  <p>本気でやった半年弱の期間でエタイ300からエタイ622まで上げた</p>
+  <p>エタイ最高記録626</p>
+  <p>打トレ最高記録722</p>
+  <p>pop最高記録57163</p>
+  <p>今は引退パーなので基本はタイピングはしないができそうな時は大会などにも参加するかもしれない</p>
+  <p>正確性は大抵98％以上</p>
+  <p>初速は大抵0.39最高0.31</p>
+</li>
+
+      </ul>
+    </div>
+  </section>
 </main>
+
 <footer class="footer">
-  <div class="footer-container">
-    <!-- 左側：ロゴとタイトル -->
-    <div class="footer-brand">
-      <img src="../image/zetyper-footer.png" width="200px" height="200px" id="home-button">
-
-    </div>
-
-    <!-- 右側：フッターメニュー -->
-    <div class="footer-links">
-      <div class="footer-column">
-        <h4>ソーシャル</h4>
-        <ul>
-          <li><a href="https://www.youtube.com/@ze-taipa" target="_blank">Youtube</a></li>
-          <li><a href="https://x.com/yper343802" target="_blank">X(旧Twitter)</a></li>
-          <li><a href="https://discord.gg/sAjsFKArNw" target="_blank">Discord</a></li>
-          <li><a href="https://padlet.com/typer3915/yper-yn963c63aqw79j9p" target="_blank">Padlet</a></li>
-
-        </ul>
-      </div>
-
-      <div class="footer-column">
-        <h4>開発</h4>
-        <ul>
-          <li><a href="https://zetyper.f5.si/docs" target="_blank">ドキュメント</a></li>
-          <li><a href="https://github.com/saijaku1/-yper/tree/main" target="_blank">リポジトリ</a></li>
-          <li><a href="https://zetyper.f5.si/docs/updated" target="_blank">変更履歴</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-column">
-        <h4>リソース</h4>
-        <ul>
-          <li><a href="https://zetyper.f5.si/docs/terms-of-service" target="_blank">利用規約</a></li>
-          <li><a href="https://zetyper.f5.si/docs/guidelines" target="_blank">ガイドライン</a></li>
-
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- コピーライト -->
   <div class="footer-bottom">
     <p>© 2025 - ζyper. 一部の画像・素材は各権利者に帰属します。</p>
   </div>
 </footer>
+
 <script src="script.js"></script>
 </body>
 </html>
+
