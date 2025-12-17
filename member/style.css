@@ -390,6 +390,41 @@ dialog img{
     background-color: #043370;
   }
 }
+/* ===== メンバー検索 ===== */
+#memberSearch {
+  position: fixed;
+  top: 42vh;
+  left: 93%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  padding: 10px 12px;
+  width: 160px;
+  font-size: 15px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+}
+
+
+.card.highlight {
+  outline: 3px solid #2f91fa;
+  box-shadow: 0 0 18px rgba(47,145,250,0.6);
+}
+
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  #memberSearch {
+    position: relative;
+    top: 52vh;
+    left: 50%;
+    width: 200px;
+  }
+}
+
+
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -398,6 +433,7 @@ dialog img{
 }
 
 @media (max-width: 768px) {
+
   .footer-container {
     flex-direction: column;
     align-items: center;
@@ -412,41 +448,77 @@ dialog img{
     margin-bottom: 1em;
   }
 
-   .fixed ul {
-    display:none;
+  .fixed ul {
+    display: none;
   }
 
   .fixed a {
     font-size: 1rem;
   }
 
-  .hamburger {
-    top: 10px;
-    left: 10px;
-  }
+
+ 
 
   .sidebar ul li {
     padding: 12px 20px;
   }
-   
+
+  #memberSearch,
+  select {
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    max-width: 320px;
+    z-index: 1000;
+  }
+
+  select {
+    margin-top: 55px;
+  }
+
+  main {
+    padding-top: 140px;
+  }
+
   .member-list ul {
     flex-direction: column;
     align-items: center;
   }
+
   .card {
-    width: 80%;
+    width: 92%;
+    padding: 18px;
   }
-  select {
-    position: relative;
-    top: 55vh;
-    left: 50%;
+
+  .card h3 {
+    font-size: 24px;
   }
-  dialog{
-    width:auto;
+
+  .card p {
+    font-size: 15px;
   }
-   dialog img{
-    width: 370px;
-     object-fit:cover;
+
+  dialog {
+    width: 95%;
+    max-width: 420px;
+    height: auto;
+    max-height: 90vh;
+    padding: 15px;
+  }
+
+  dialog img {
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+    object-fit: contain;
     margin-bottom: 15px;
+  }
+
+  .openBtn,
+  .closeBtn {
+    width: 100%;
+    font-size: 15px;
   }
 }
