@@ -17,31 +17,59 @@ const memberSelect = document.getElementById("memberSelect");
 
 memberSelect.addEventListener("change", () => {
   const selectedId = memberSelect.value;
-  if (selectedId) {
-    document.getElementById(selectedId).scrollIntoView({ behavior: "smooth" });
-  }
+  if (!selectedId) return;
+
+  const target = document.getElementById(selectedId);
+  target.scrollIntoView({ behavior: "smooth", block: "center" });
+
+  target.classList.add("highlight");
+  setTimeout(() => target.classList.remove("highlight"), 1500);
 });
 
-const openBtns = document.querySelectorAll('.openBtn');
-const closeBtns = document.querySelectorAll('.closeBtn');
+const searchInput = document.getElementById("memberSearch");
 
-openBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const targetId = btn.getAttribute('data-target');
+searchInput.addEventListener("input", () => {
+  const keyword = searchInput.value.toLowerCase();
+
+  document.querySelectorAll(".card").forEach((card) => {
+    const text = card.innerText.toLowerCase();
+    card.style.display = text.includes(keyword) ? "flex" : "none";
+  });
+});
+
+
+const openBtns = document.querySelectorAll(".openBtn");
+const closeBtns = document.querySelectorAll(".closeBtn");
+
+openBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const targetId = btn.getAttribute("data-target");
     const dialog = document.getElementById(targetId);
     dialog.showModal();
-
-    document.body.classList.add('no-scroll'); 
+    document.body.classList.add("no-scroll");
   });
 });
 
-closeBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    btn.closest('dialog').close();
-
-    document.body.classList.remove('no-scroll'); 
+closeBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    btn.closest("dialog").close();
+    document.body.classList.remove("no-scroll");
   });
 });
+
+document.querySelectorAll("dialog").forEach((dialog) => {
+  dialog.addEventListener("click", (e) => {
+    if (e.target === dialog) {
+      dialog.close();
+      document.body.classList.remove("no-scroll");
+    }
+  });
+
+  dialog.addEventListener("close", () => {
+    document.body.classList.remove("no-scroll");
+  });
+});
+
 
 const hamburger = document.getElementById("hamburger");
 const sidebar = document.getElementById("sidebar");
@@ -53,3 +81,4 @@ hamburger.addEventListener("click", () => {
   sidebar.style.display = "block";
   hamburger.classList.toggle("active");
 });
+
