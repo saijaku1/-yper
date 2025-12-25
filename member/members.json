@@ -1,1 +1,214 @@
-
+{
+  "Negiroto": {
+    "name": "ねぎろと",
+    "image": "../../image/Negitoro.jpg",
+    "description": [
+      "ねぎろとです",
+      "ねぎとろではありません",
+      "目立った記録はありませんが中級者なりに頑張っている人です"
+    ],
+    "fingering": "../../fingering/Negitorounyubi.jpg"
+  },
+  "Jaku": {
+    "name": "Jaku",
+    "image": "../../image/AIJaku.png",
+    "description": [
+      "タイピング歴　1年半 (もうすぐで2年経つ)",
+      "正確性を鍛えてる乱打タイパー",
+      "最近スピードを抑えることで正確性が上がるということに気づいた",
+      "初速は平均ぐらい",
+      "英語タイピングなら自信あります",
+      "目標はZ8討伐。",
+      "FNF好きな人はXのDMでいつでも連絡してください！"
+    ],
+    "fingering": "../../fingering/JAKU_UNNYUBI.jpg"
+  },
+  "HFKRU": {
+    "name": "HFKRU_Typing",
+    "image": "../../image/HFKRU.png",
+    "description": [
+      "e-typing　544pt",
+      "Tyz　655打鍵/分",
+      "Pop 　47,095粒",
+      "詳しくはツイフィールを御覧ください"
+    ],
+    "fingering": "../../fingering/HFKRU-UNNYUBI.png"
+  },
+  "Gabugabu": {
+    "name": "ガブガブ",
+    "image": "../../image/gabugabu.png",
+    "description": [
+      "エタイ850",
+      "過去の記録に縋りまくってるタイピングしてないタイパー",
+      "韓国語が少し打てるが話せない"
+    ]
+  },
+  "SPA": {
+    "name": "スピードアキュレイト",
+    "image": "../../image/SpeedAccurate.jpg",
+    "description": [
+      "タイピング歴2025年2月～",
+      "スピードアキュレイトです。",
+      "動画撮影などは学パソで行っています。",
+      "いっちゃんとぜんちゃんの二人でやってます",
+      "エタイがとても苦手です！",
+      "単語や長文が苦手で短文が得意。",
+      "初速が死んでおり正確性も死んでいる",
+      "伸びしろはあるはず"
+    ],
+    "fingering": "../../fingering/SPA-UNNYUBI.jpg"
+  },
+  "Dadada": {
+    "name": "だだだ",
+    "image": "../../image/dadada.png",
+    "description": [
+      "タイピング歴　2023年8月～",
+      "初速が調子の悪い時だと平均0.5を上回る",
+      "調子が良くても0.45くらいととても遅い。",
+      "最近はエタイの調子が悪いがほかのサイトは記録を更新している。",
+      "得意なタイピングサイトは打鍵トレーナーとタイピンガーZ",
+      "タイピング目標は選抜タイパー入り、RTC優勝"
+    ],
+    "fingering": "../../fingering/dadadaunyubi.png"
+  },
+  "Kiru": {
+    "name": "きる",
+    "image": "../../image/Kiru.png",
+    "description": [
+      "タイピング歴　2020年 12月~",
+      "Popタイピング7万粒　タイピンガーZ　892打鍵",
+      "だが、エタイは苦手なため、645pt",
+      "ζyperの中では中堅の立ち位置にある。",
+      "タイピング以外で得意なのは、画像編集と動画編集"
+    ]
+  },
+  "Hal": {
+    "name": "unused_HAL",
+    "image": "../../image/HAL.png",
+    "description": [
+      "中堅乱打タイパーですが、よろしくお願いします。",
+      "速は平均くらいです（大体0.45秒前後)",
+      "寿司打お手軽11,580円お得（102皿）",
+      "エタイR658pt K362pt",
+      "タイプウェルR常用ZI",
+      "タイピンガーZ 850打鍵"
+    ],
+    "fingering": "../../fingering/HAL_unnyubi.png"
+  },
+  "Hatimityu": {
+    "name": "はちみちゅ",
+    "image": "../../image/Hatimityu.png",
+    "description": [
+      "はちみちゅです",
+      "初速と最高速はまあまあ速いですけど",
+      "対戦よろしくお願いします"
+    ],
+    "fingering": "../../fingering/HATIMITYU_UNNYUBI.png"
+  },
+  "Kyou": {
+    "name": "狂",
+    "image": "../../image/kyou.jpg",
+    "description": [
+      "海王星に住んでいる室外機です",
+      "よく変換ミスします",
+      "怠慢タイパーです",
+      "タイピング歴2021年9月　4年やってる割には遅い",
+      "エタイR720 E556",
+      "タイピンガーz 862打鍵/糞"
+    ],
+    "fingering": "../../fingering/KYOU-UNNYUBI.png"
+  },
+  "MHJ": {
+    "name": "MHJ",
+    "image": "../../image/MHJ.png",
+    "description": [
+      "タイピング歴　1年6ヶ月",
+      "e-typing　643pt",
+      "最初の文からの加速力に自信を持っている",
+      "タイピングは友達に挑発されて始めたというなんともｷｯｽﾞらしい動機ではじめた",
+      "目標はe-typing　R腕試し1000pt"
+    ],
+    "fingering": "../../fingering/MHJ-UNNYUBI.png"
+  },
+  "Kabotya": {
+    "name": "かぼちゃ",
+    "image": "../../image/Kabotya.png",
+    "description": [
+      "タイピング歴 2021年 4月頃～",
+      "速度特化型と自負してますがζyper内ではそこまで目立つ存在ではありません。",
+      "キーボードは、(Eitoに憧れて購入した) BFKB113PBK を使用しています。",
+      "爆発力はあまりなく、基本的に安定しています(自己評価)。",
+      "タイピング目標は、e-typing 850pt、タイピンガーZ 1000打鍵、打鍵トレーナー 1000打鍵です"
+    ],
+    "fingering": "../../fingering/Kabocha-unnyubi.png"
+  },
+  "Mameeda": {
+    "name": "まめえだ",
+    "image": "../../image/mameeda.jpg",
+    "description": [
+      "タイピング歴　たぶん1年（？）　たぶん違う（",
+      "初速重視寸止めタイパー。",
+      "チーム内でもかなり英語が得意",
+      "エタイ634　pop56846か56848",
+      "高速タイピング723"
+    ],
+    "fingering": "../../fingering/MAMEEDA-UNNYUBI.png"
+  },
+  "Eito": {
+    "name": "えいと",
+    "image": "../../image/Eito.png",
+    "description": [
+      "タイピング歴　約3年",
+      "キーボードは基本的にBFKB113PBK を使用しています。",
+      "14歳で受験生やってます。",
+      "最終的な目標は...RTC出場です。"
+    ]
+  },
+  "Nuu": {
+    "name": "ぬう",
+    "image": "../../image/Nuu.png",
+    "description": [
+      "人差し指タイパー",
+      "一分間平均打鍵668打鍵",
+      "今は活動休止をしています"
+    ],
+    "fingering": "../../fingering/NUU_UNNYUBI.png"
+  },
+  "Mattunn": {
+    "name": "まっつん",
+    "image": "../../image/mattunn.png",
+    "description": [
+      "タイピング歴　4年ぐらい",
+      "e-typing　708pt",
+      "変態運指＋学校パソコン勢です。"
+    ]
+  },
+  "Renkon": {
+    "name": "れんこん",
+    "image": "../../image/renkon.jpeg",
+    "description": ["よく大会に出ていて歌詞タイピングが特に好きです"]
+  },
+  "Atarimae": {
+    "name": "当たり前体操",
+    "image": "../../image/Atarimae.jpg",
+    "description": [
+      "タイピング歴2021年6月〜",
+      "特徴エタイスコアとtyzの記録が別れすぎてるタイパー(？)",
+      "目標:z10討伐"
+    ]
+  },
+  "Shirasu": {
+    "name": "しらす",
+    "image": "../../image/Shirasu.jpg",
+    "description": [
+      "タイピング歴2021年4月〜",
+      "本気でやった半年弱の期間でエタイ300からエタイ622まで上げた",
+      "エタイ最高記録626",
+      "打トレ最高記録722",
+      "pop最高記録57163",
+      "今は引退パーなので基本はタイピングはしないができそうな時は大会などにも参加するかもしれない",
+      "正確性は大抵98％以上",
+      "初速は大抵0.39最高0.31"
+    ]
+  }
+}
