@@ -1,4 +1,8 @@
- html{
+#judge a{
+  color:rgb(0, 208, 255);
+}
+
+html{
   scroll-behavior: smooth;
 }
 
