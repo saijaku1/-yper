@@ -68,7 +68,15 @@ form.addEventListener("submit", function(event) {
   event.preventDefault(); 
   let rec = inputs.map(id => Number($(id).value));
   const score = Math.floor(rec[0] + (rec[1] + rec[2] + rec[3] * 2) / 5 * 4 + (rec[4] + rec[5]) / 10);
-  $("result").textContent = "合計で" + score + "pt"; 
+  $("result").textContent = "合計で" + score + "pt";
+  if (score<2600){
+    $("judge").innerHTML = "参加推奨レベルまで:" + (2600 - score) + "pt"+"<br>参加申請は<a href='https://docs.google.com/forms/d/1ifzD14vdlZccl-CXgxi1WWKQg55kwzcxKANf4G5nXQ0' target='_blank'>こちら</a>から";
+    $("judge").style.color = "red";
+  }
+  else{
+    $("judge").innerHTML = "参加推奨レベル +"+(score-2600)+"pt <br>参加は<a href='https://docs.google.com/forms/d/1ifzD14vdlZccl-CXgxi1WWKQg55kwzcxKANf4G5nXQ0' target='_blank'>こちら</a>から";
+    $("judge").style.color = "rgb(0, 208, 255)";
+  }
   rank=0;
 
   for(let i=0;i<scores.length-1;i++){
@@ -87,6 +95,8 @@ $("reset").addEventListener("click", () => {
     $(id).value = "";              
     localStorage.removeItem(id);
   });
-  $("result").textContent = "計算結果がここに出ます・・・"; 
+  $("result").textContent = "計算結果がここに出ます"; 
   $("rank").textContent = "?";
-});
+  $("judge").textContent = "判定結果がここに出ます";
+  $("judge").style.color = "white";
+  $("tonext").textContent = "NaN";});
