@@ -1,3 +1,51 @@
+fetch("news.json")
+  .then(res => res.json())
+  .then(news => {
+    const container = document.getElementById("news-list");
+
+    // 日付が新しい順に並び替え
+    news.sort((a, b) => new Date(b.updated) - new Date(a.updated));
+
+    news.forEach(item => {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      // タイトル
+      const title = document.createElement("h3");
+      title.style.color = "white";
+      title.textContent = item.title;
+      card.appendChild(title);
+
+      // 本文
+      item.content.forEach(text => {
+        const p = document.createElement("p");
+        p.textContent = text;
+        card.appendChild(p);
+      });
+
+      // リンク
+      if (item.links && item.links.length > 0) {
+        item.links.forEach(link => {
+          const a = document.createElement("a");
+          a.href = link.url;
+          a.textContent = link.text;
+          a.target = "_blank";
+          card.appendChild(a);
+        });
+      }
+
+      // 更新日
+      const date = document.createElement("h4");
+      date.textContent = `${item.updated} 更新済み`;
+      card.appendChild(date);
+
+      container.appendChild(card);
+    });
+  })
+  .catch(err => {
+    console.error("ニュースの読み込みに失敗しました", err);
+  });
+
 const targets = document.querySelectorAll(".hidden");
 
 const observer = new IntersectionObserver(
@@ -32,3 +80,4 @@ hamburger.addEventListener("click", () => {
   sidebar.style.display = "block";
   hamburger.classList.toggle("active");
 });
+
