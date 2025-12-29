@@ -1,19 +1,27 @@
 const btn = document.getElementById('send');
-const result = document.getElementById('result');
-const rankText = document.getElementById('rankText');
+const result = document.getElementById("result");
+const rankText = document.getElementById("rankText");
+const nextRank = document.getElementById("nextRank");
 
-btn.addEventListener('click', () => {
-  result.classList.remove('animate');
-  rankText.classList.remove('animate');
-  void result.offsetWidth;
-  result.classList.add('animate');
+btn.addEventListener("click", () => {
+  [result, rankText, nextRank].forEach((el) => {
+    el.classList.remove("animate");
+    void el.offsetWidth; 
+  });
+
+  result.classList.add("animate");
 });
 
-result.addEventListener('animationend', () => {
-  rankText.classList.remove('animate');
-  void rankText.offsetWidth;
-  rankText.classList.add('animate');
+result.addEventListener("animationend", (e) => {
+  if (e.target !== result) return;
+  rankText.classList.add("animate");
 });
+
+rankText.addEventListener("animationend", (e) => {
+  if (e.target !== rankText) return;
+  nextRank.classList.add("animate");
+});
+
 
  const targets = document.querySelectorAll(".hidden");
 
