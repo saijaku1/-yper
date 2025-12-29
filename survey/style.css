@@ -14,7 +14,7 @@ body{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     overflow-x: hidden;
 }
 
@@ -235,7 +235,14 @@ main .background h1{
     font-size: 20px;
 }
 
-#result, #rankText {
+.result{
+  border:solid 10px #2f91fa;
+  border-radius:20px;
+  width:600px;
+  margin:50px auto;
+}
+
+#result, #rankText,#nextRank {
   opacity: 0;
 }
 
@@ -245,7 +252,7 @@ main .background h1{
   100% { transform: translateX(0%); opacity: 1; }
 }
 
-#result.animate, #rankText.animate {
+#result.animate, #rankText.animate, #nextRank.animate {
   animation: slideBounce 1s ease forwards;
 }
 
@@ -337,7 +344,10 @@ main .background h1{
   .fixed a {
     font-size: 1rem;
   }
-
+  .result{
+    width:300px;
+  }
+ 
   .hamburger {
     top: 10px;
     left: 10px;
@@ -346,7 +356,6 @@ main .background h1{
   .sidebar ul li {
     padding: 12px 20px;
   }
-
   
   #title {
     font-size: 2em;
