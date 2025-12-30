@@ -1,8 +1,8 @@
 const rawData = {
   ranking: [
-    "Jaku:576pt",
+    "Jaku:640pt",
     "HFKRU:544pt",
-    "スピードアキュレイト:620pt",
+    "スピードアキュレイト:681pt",
     "ぬう:622pt",
     "円周率:622pt",
     "しらす:626pt",
@@ -10,10 +10,10 @@ const rawData = {
     "まめえだ:634pt",
     "Jujun10:640pt",
     "MHJ:643pt",
-    "unused_HAL:655pt",
+    "unused_HAL:711pt",
     "ねぎろと:660pt",
-    "きる:664pt",
-    "だだだ:685pt",
+    "きる:692pt",
+    "だだだ:691pt",
     "まっつん:708pt",
     "狂:720pt",
     "owata:743pt",
@@ -21,7 +21,7 @@ const rawData = {
     "かぼちゃ:783pt",
     "無名:787pt",
     "とある:795pt",
-    "えいと:824pt",
+    "えいと:834pt",
     "ガブガブ:880pt"
 ]
 };
