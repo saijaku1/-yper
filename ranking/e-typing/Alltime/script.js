@@ -11,7 +11,7 @@ const rawData = {
     "Jujun10:702pt",
     "MHJ:690pt",
     "unused_HAL:711pt",
-    "ねぎろと:711pt",
+    "ねぎろと:710pt",
     "きる:692pt",
     "だだだ:713pt",
     "まっつん:708pt",
