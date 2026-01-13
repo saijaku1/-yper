@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>マイページ - ζyper</title>
+    <link rel="icon" href="../../image/zetyper.png" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- 既存のサイドバー用スタイルも必要なら読み込む -->
+    <link rel="stylesheet" href="../login/style.css" />
+  </head>
+  <body>
+    <!-- サイドバー -->
+    <div id="sidebar" class="sidebar">
+      <div class="logo"></div>
+      <img
+        src="../image/zetyper.png"
+        width="60"
+        height="60"
+        style="margin: 20px; border-radius: 50%"
+      />
+      <h3>ζyper</h3>
+      <ul>
+        <li><a href="../">ホーム</a></li>
+        <li><a href="../ranking">ζyperランキング</a></li>
+        <li><a href="../survey">ζyperランク測定</a></li>
+        <li><a href="../member">メンバー紹介</a></li>
+        <li><a href="../docs">ドキュメント</a></li>
+        <li><a href="#" id="logout-menu">ログアウト</a></li>
+        <p style="color: white; padding-left: 20px">&copy;2025 ζyper.</p>
+      </ul>
+    </div>
+
+    <div id="hamburger" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <main class="mypage-main">
+      <div class="mypage-container">
+        <div class="profile-header-card">
+          <div class="profile-avatar-container">
+            <img
+              src="../image/zetyper.png"
+              alt="プロフィール画像"
+              id="current-avatar"
+              class="profile-avatar"
+            />
+            <label for="avatar-upload" class="avatar-edit-overlay">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="white">
+                <path
+                  d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                />
+              </svg>
+            </label>
+            <input
+              type="file"
+              id="avatar-upload"
+              accept="image/*"
+              style="display: none"
+            />
+          </div>
+          <h1 id="display-name">ユーザー名</h1>
+          <p id="user-email" class="email-text">email@example.com</p>
+          <div class="profile-actions">
+            <a
+              href="#"
+              id="public-profile-link"
+              target="_blank"
+              class="btn btn-secondary btn-sm"
+            >
+              公開ページを見る
+              <svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="currentColor"
+                style="margin-left: 4px"
+              >
+                <path
+                  d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="edit-form-card">
+          <h2>プロフィール編集</h2>
+          <form id="profile-form">
+            <div class="form-group">
+              <label for="name-input">表示名</label>
+              <input
+                type="text"
+                id="name-input"
+                placeholder="表示名を入力"
+                required
+                maxlength="30"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="bio-input">自己紹介</label>
+              <textarea
+                id="bio-input"
+                rows="4"
+                placeholder="自己紹介文を入力してください（最大200文字）"
+                maxlength="200"
+              ></textarea>
+              <div class="char-count"><span id="bio-count">0</span>/200</div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="save-btn">
+                <span>変更を保存</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- 通知トースト -->
+    <div id="toast" class="toast">保存しました</div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage-compat.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
