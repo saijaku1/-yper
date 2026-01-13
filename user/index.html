@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>プロフィール - ζyper</title>
+    <link rel="icon" href="../../image/zetyper.png" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- スタイルはmypageと共通のものを使用 -->
+    <link rel="stylesheet" href="../mypage/style.css" />
+    <link rel="stylesheet" href="../login/style.css" />
+    <style>
+      /* 公開ページ固有の調整 */
+      .profile-actions {
+        display: none !important; /* 公開ページでは編集ボタンなどを非表示 */
+      }
+      .mypage-main {
+        min-height: 80vh;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- サイドバー -->
+    <div id="sidebar" class="sidebar">
+      <div class="logo"></div>
+      <img
+        src="../image/zetyper.png"
+        width="60"
+        height="60"
+        style="margin: 20px; border-radius: 50%"
+      />
+      <h3>ζyper</h3>
+      <ul>
+        <li><a href="../">ホーム</a></li>
+        <li><a href="../ranking">ζyperランキング</a></li>
+        <li><a href="../survey">ζyperランク測定</a></li>
+        <li><a href="../member">メンバー紹介</a></li>
+        <li><a href="../docs">ドキュメント</a></li>
+        <li><a href="../login" class="login-link">ログイン</a></li>
+        <p style="color: white; padding-left: 20px">&copy;2025 ζyper.</p>
+      </ul>
+    </div>
+
+    <div id="hamburger" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <main class="mypage-main">
+      <div class="mypage-container">
+        <!-- 読み込み中 -->
+        <div id="loading" style="text-align: center; color: white">
+          <p>読み込み中...</p>
+        </div>
+
+        <!-- エラー表示 -->
+        <div
+          id="error-view"
+          style="display: none; text-align: center; color: white"
+        >
+          <h2>ユーザーが見つかりません</h2>
+          <p>URLが間違っているか、ユーザーが存在しません。</p>
+          <a
+            href="../"
+            class="btn btn-secondary"
+            style="display:inline-flex; mt-4;"
+            >トップへ戻る</a
+          >
+        </div>
+
+        <!-- プロフィール表示 -->
+        <div id="profile-view" style="display: none">
+          <div class="profile-header-card">
+            <div class="profile-avatar-container" style="cursor: default">
+              <img
+                src="../image/zetyper.png"
+                alt="プロフィール画像"
+                id="user-avatar"
+                class="profile-avatar"
+              />
+              <!-- オーバーレイなし -->
+            </div>
+            <h1 id="display-name">ユーザー名</h1>
+            <!-- Emailは表示しない -->
+          </div>
+
+          <div class="edit-form-card">
+            <h2>自己紹介</h2>
+            <p
+              id="user-bio"
+              style="white-space: pre-wrap; line-height: 1.6; color: #e0e0e0"
+            >
+              自己紹介はまだありません。
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="../auth.js"></script>
+
+    <script>
+      // auth.js で初期化済みなのでここでは db を取得するだけ
+      const db = firebase.firestore();
+
+      // ユーザー取得
+      function loadUser() {
+        const params = new URLSearchParams(window.location.search);
+        const uid = params.get("uid");
+
+        if (uid) {
+          // URLパラメータがある場合はそのユーザーを表示
+          fetchUserData(uid);
+        } else {
+          // URLパラメータがない場合、ログイン中のユーザーを表示してみる
+          firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+              // 自分のプロフィールを表示するため、URLを書き換えてリロード（またはそのまま表示）
+              // ここではそのまま表示するが、URLにID付与すると共有しやすい
+              const newUrl = new URL(window.location);
+              newUrl.searchParams.set("uid", user.uid);
+              window.history.replaceState({}, "", newUrl);
+              fetchUserData(user.uid);
+            } else {
+              showError();
+            }
+          });
+        }
+      }
+
+      async function fetchUserData(uid) {
+        try {
+          const doc = await db.collection("users").doc(uid).get();
+          if (doc.exists) {
+            const data = doc.data();
+            document.getElementById("display-name").textContent =
+              data.displayName || "名無し";
+            if (data.photoURL) {
+              document.getElementById("user-avatar").src = data.photoURL;
+            }
+            if (data.bio) {
+              document.getElementById("user-bio").textContent = data.bio;
+            }
+
+            document.getElementById("loading").style.display = "none";
+            document.getElementById("profile-view").style.display = "block";
+          } else {
+            showError();
+          }
+        } catch (error) {
+          console.error(error);
+          showError();
+        }
+      }
+
+      function showError() {
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("error-view").style.display = "block";
+      }
+
+      loadUser();
+
+      // ハンバーガーメニュー
+      const hamburger = document.getElementById("hamburger");
+      const sidebar = document.getElementById("sidebar");
+
+      hamburger.addEventListener("click", () => {
+        const isOpen = sidebar.style.width === "250px";
+        sidebar.style.width = isOpen ? "0" : "250px";
+        sidebar.style.zIndex = isOpen ? "0" : "1000";
+        sidebar.style.display = "block";
+        hamburger.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
