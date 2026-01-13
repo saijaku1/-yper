@@ -1,4 +1,15 @@
 {
+  "Elcuk": {
+    "name": "Eluck",
+    "image": "../../image/Eluck.png",
+    "description": [
+      "雑談好きのお気楽タイパー",
+      "すごいしゃべります",
+      "タイパー内で有名になりたいです",
+      "目指すは選抜！最上位勢の隣に立ちたい！"
+    ]
+  },
+{
   "Negiroto": {
     "name": "ねぎろと",
     "image": "../../image/Negitoro.jpg",
