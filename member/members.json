@@ -1,6 +1,6 @@
 {
   "Elcuk": {
-    "name": "Eluck",
+    "name": "Elcuk",
     "image": "../../image/Eluck.png",
     "description": [
       "雑談好きのお気楽タイパー",
@@ -9,7 +9,6 @@
       "目指すは選抜！最上位勢の隣に立ちたい！"
     ]
   },
-{
   "Negiroto": {
     "name": "ねぎろと",
     "image": "../../image/Negitoro.jpg",
@@ -54,7 +53,7 @@
       "韓国語が少し打てるが話せない"
     ]
   },
-   "N.S.21": {
+  "N.S.21": {
     "name": "N.S.21",
     "image": "../../image/N.S.21.avif",
     "description": [
@@ -64,7 +63,7 @@
       "初速激遅です。対よろです"
     ]
   },
-    "Owata": {
+  "Owata": {
     "name": "owata",
     "image": "../../image/Owata.jpg",
     "description": [
@@ -109,7 +108,7 @@
       "ζyperの中では中堅の立ち位置にある。",
       "タイピング以外で得意なのは、画像編集と動画編集"
     ],
-    "fingering":"../../fingering/Kiru_unnyubi.png"
+    "fingering": "../../fingering/Kiru_unnyubi.png"
   },
   "Hal": {
     "name": "unused_HAL",
@@ -144,7 +143,7 @@
       "怠慢タイパーです",
       "タイピング歴2021年9月　4年やってる割には遅い",
       "エタイR720 E556",
-      "タイピンガーz 862打鍵/糞"
+      "タイピンガーz 862打鍵/分"
     ],
     "fingering": "../../fingering/KYOU-UNNYUBI.png"
   },
@@ -216,7 +215,9 @@
   "Renkon": {
     "name": "れんこん",
     "image": "../../image/renkon.jpeg",
-    "description": ["よく大会に出ていて歌詞タイピングが特に好きです"]
+    "description": [
+      "よく大会に出ていて歌詞タイピングが特に好きです"
+    ]
   },
   "Atarimae": {
     "name": "当たり前体操",
