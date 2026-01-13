@@ -1,24 +1,10 @@
 // ====================================
-// Firebase Config will be loaded from a shared file or defined here
-// (本来は設定を共通化すべきですが、今回はlogin/app.jsからコピーして使用します)
+// Firebase Init
+// auth.js で初期化済みであることを前提とします
 // ====================================
-const firebaseConfig = {
-  apiKey: "AIzaSyBgWGW2RuKk10ZCXap2qH0xyvnH4RDaWfc",
-  authDomain: "zetyper-api.firebaseapp.com",
-  projectId: "zetyper-api",
-  storageBucket: "zetyper-api.firebasestorage.app",
-  messagingSenderId: "332216326404",
-  appId: "1:332216326404:web:b2b45647fb6c190d51d851",
-  measurementId: "G-X9MT8LV39V",
-};
-
-// Initialize Firebase
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-}
-
 const auth = firebase.auth();
 const db = firebase.firestore();
+const storage = firebase.storage();
 const storage = firebase.storage();
 
 // ====================================
@@ -158,7 +144,10 @@ avatarInput.addEventListener("change", async (e) => {
     // File path: users/{uid}/avatar.jpg
     const avatarRef = storageRef.child(`users/${currentUser.uid}/avatar`);
 
-    await avatarRef.put(file);
+    const metadata = {
+      contentType: file.type,
+    };
+    await avatarRef.put(file, metadata);
     const downloadURL = await avatarRef.getDownloadURL();
 
     // Update Firestore
