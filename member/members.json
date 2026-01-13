@@ -53,6 +53,13 @@
       "初速激遅です。対よろです"
     ]
   },
+    "Owata": {
+    "name": "owata",
+    "image": "../../image/Owata.jpg",
+    "description": [
+      "タイピングのために視力と学力を捨てた人"
+    ]
+  },
   "SPA": {
     "name": "スピードアキュレイト",
     "image": "../../image/SpeedAccurate.jpg",
