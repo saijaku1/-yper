@@ -1,6 +1,6 @@
 const rawData = {
   ranking: [
-    "Jaku:640pt",
+    "Jaku:643pt",
     "HFKRU:544pt",
     "スピードアキュレイト:697pt",
     "ぬう:622pt",
@@ -22,7 +22,9 @@ const rawData = {
     "無名:822pt",
     "とある:805pt",
     "Eito:853pt",
-    "ガブガブ:880pt"
+    "ガブガブ:880pt",
+    "ぁ:721pt",
+    "E:655pt"
 ]
 };
 
