@@ -8,6 +8,7 @@ const rawData = {
     "しらす:626pt",
     "こたくん:630pt",
     "まめえだ:634pt",
+    "てるさん:531pt",
     "Jujun10:702pt",
     "MHJ:690pt",
     "unused_HAL:711pt",
