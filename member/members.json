@@ -70,6 +70,17 @@
       "タイピングのために視力と学力を捨てた人"
     ]
   },
+   "てるさん": {
+    "name": "てるさん",
+    "image": "../../image/Terusan.png",
+    "description": [
+      "Playgram Typing XP Farmer",
+      "プレイグラムタイピングでひたすらレベルを上げる人。",
+      "Lv.100 / 称号 タイピングのかみ 到達済。",
+      "得意なタイピングサイトはもちろんプレイグラムタイピング。"
+    ],
+     "fingering":"../../fingering/Terusan-UNNYUBI.png",
+  },
   "SPA": {
     "name": "スピードアキュレイト",
     "image": "../../image/SpeedAccurate.jpg",
