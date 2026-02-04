@@ -265,6 +265,21 @@ const rawData = {
     "HFKRU:531pt",
     "てるさん:528pt",
   ],
+  "1293回": [
+    "Eito:726pt",
+    "かぼちゃ:724pt",
+    "unused_HAL:649pt",
+    "きる:620pt",
+    "E:634pt",
+    "だだだ:618pt",
+    "ねぎろと:552pt",
+    "スピードアキュレイト:618pt",
+    "Jaku:577pt",
+    "てるさん:476pt",
+    "HFKRU:531pt",
+    "てるさん:528pt",
+  ],
+  "1294回": [],
 };
 
 // 数値抽出
@@ -346,12 +361,11 @@ function calculateStats(data) {
   };
 }
 
-
 function checkAlltimeRecords(playerMax) {
   const updates = [];
   for (const name in playerMax) {
     const weekMax = playerMax[name];
-
+    const alltimeData = {};
     const normalizedName = name.replace(/[☆♪]/g, "");
     const alltimeScore = alltimeData[name] || alltimeData[normalizedName] || 0;
 
@@ -366,7 +380,6 @@ function checkAlltimeRecords(playerMax) {
   }
   return updates;
 }
-
 
 function renderCharts(stats) {
   // 個人平均グラフ
