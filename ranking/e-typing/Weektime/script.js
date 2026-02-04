@@ -265,19 +265,6 @@ const rawData = {
     "HFKRU:531pt",
     "てるさん:528pt",
   ],
-  "1293回": [
-    "Eito:724pt",
-    "かぼちゃ:726pt",
-    "unused_HAL:649pt",
-    "きる:620pt",
-    "E:634pt",
-    "だだだ:618pt",
-    "はちみちゅ:637pt",
-    "スピードアキュレイト:618pt",
-    "Jaku:577pt",
-    "てるさん:476pt",
-    "ねぎろと:552pt",
-  ],
 };
 
 // 数値抽出
@@ -542,7 +529,7 @@ function renderAlltimeUpdates(updates) {
 
   container.innerHTML = `
     <h3>🎉 Alltime記録更新！</h3>
-    <p>以下のプレイヤーが記録を更新しました：</p>
+    <p>以下のプレイヤーがAlltime記録を更新しました：</p>
     <ul>
       ${updates
         .map(
