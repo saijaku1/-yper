@@ -6,6 +6,7 @@
     <title>e-typingランキング</title>
     <link rel="icon" href="../../../image/zetyper.png">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <style>
    
@@ -14,11 +15,11 @@
  <div class="fixed">
       <nav>
         <ul>
-          <li><a href="../">ホーム</li>
-          <li><a href="../ranking">ζyperランキング</a></li>
-          <li><a href="../survey">ζyperランク測定</a></li>
-          <li><a href="../#join">チームへの参加方法</a></li>
-          <li><a href="../docs">ドキュメント</a></li>
+          <li><a href="../../../">ホーム</a></li>
+          <li><a href="../../../ranking">ζyperランキング</a></li>
+          <li><a href="../../../survey">ζyperランク測定</a></li>
+          <li><a href="../../../#join">チームへの参加方法</a></li>
+          <li><a href="../../../docs">ドキュメント</a></li>
         </ul>
       </nav>
     </div>
@@ -29,12 +30,12 @@
     <img src="../../../image/zetyper.png" width="60" height="60" style="margin: 20px; border-radius:50%;">
   <h3>ζyper</h3>  
   <ul>    
-          <li><a href="../">ホーム</li>
-          <li><a href="../ranking">ζyperランキング</a></li>
-          <li><a href="../survey">ζyperランク測定</a></li>
-          <li><a href="../#join">チームへの参加方法</a></li>
-          <li><a href="../docs">ドキュメント</a></li>
-          <p style="color:white; padding-left:20px;">&copy;2026  ζyper.</p>
+          <li><a href="../../../">ホーム</a></li>
+          <li><a href="../../../ranking">ζyperランキング</a></li>
+          <li><a href="../../../survey">ζyperランク測定</a></li>
+          <li><a href="../../../#join">チームへの参加方法</a></li>
+          <li><a href="../../../docs">ドキュメント</a></li>
+          <p style="color:white; padding-left:20px;">&copy;2025  ζyper.</p>
         </ul>
     </ul>
   </div>
@@ -55,14 +56,20 @@
     <h2 class="hidden zoom-in delay-2">e-typing歴代ランキング</h2>
     <hr class="hidden zoom-in delay-3">
 
+<!-- グラフエリア -->
+<div class="chart-container">
+  <div class="chart-wrapper chart-tall">
+    <canvas id="alltime-chart"></canvas>
+  </div>
+</div>
+
 <select id="table-select">
   <option value="none">-- 選択してください --</option>
   <option value="ranking">e-typing歴代ランキング</option>
-
 </select>
 
 <div id="none" class="table-div">
- <h1>選択するとここに表示されます</h1>
+  <h1>選択するとここに表示されます</h1>
 </div>
 
 <div id="ranking" class="table-div">
@@ -116,7 +123,7 @@
 
   <!-- コピーライト -->
   <div class="footer-bottom">
-    <p></p>
+  
   </div>
 </footer>
 </main>
@@ -137,8 +144,10 @@ const observer = new IntersectionObserver(
     threshold: 0.1,
   }
 );
-targets.forEach((target) => observer.observe(target));  
+targets.forEach((target) => observer.observe(target));
 </script>
 <script src="script.js"></script>
+<script src="../../../time.js"></script>
 </body>
 </html>
+
