@@ -63,6 +63,14 @@
       "初速激遅です。対よろです"
     ]
   },
+  "N.S.21": {
+    "name": "小麦粉",
+    "image": "../../image/Komugi.png",
+    "description": [
+      "小麦粉です！",
+      "タイピング初心者ですがよろしくお願いします！"
+    ]
+  },
   "Owata": {
     "name": "owata",
     "image": "../../image/Owata.jpg",
