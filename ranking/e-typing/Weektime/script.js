@@ -295,7 +295,33 @@ const rawData = {
      "HFKRU:534pt",
   ],
   "1295回":[
-    
+    "Eito:768pt",
+    "かぼちゃ:729pt",
+    "スピードアキュレイト:641pt",
+    "unused_HAL:640pt",
+    "きる:610pt",
+    "E:604pt",
+    "Jaku:594pt",
+    "まっつん:562pt",
+    "てるさん:531pt",
+    "HFKRU:507pt"
+  ],
+   "1296回":[
+    "Eito:747pt",
+    "かぼちゃ:726pt",
+    "owata☆♪:658pt",
+    "BOKUCHARO:642pt"
+    "スピードアキュレイト:647pt",
+    "unused_HAL:640pt",
+    "きる:639pt",
+    "E:633pt",
+    "Jaku:577pt",
+    "だだだ:590pt",
+    "てるさん:501pt",
+    "HFKRU:494pt",
+    "shidaken:500pt",
+    "小麦粉:582pt",
+    "ねぎろと:563pt"
   ],
 };
 
