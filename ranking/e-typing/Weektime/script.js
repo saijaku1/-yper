@@ -310,7 +310,7 @@ const rawData = {
     "Eito:747pt",
     "かぼちゃ:726pt",
     "owata☆♪:658pt",
-    "BOKUCHARO:642pt"
+    "BOKUCHARO:642pt",
     "スピードアキュレイト:647pt",
     "unused_HAL:640pt",
     "きる:639pt",
